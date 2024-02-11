@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB1811C62B7929BC00AAC6D5 /* CueBand Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CB1811C52B7929BC00AAC6D5 /* CueBand Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CB1811CB2B7929BC00AAC6D5 /* CueBandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811CA2B7929BC00AAC6D5 /* CueBandApp.swift */; };
+		CB1811CD2B7929BC00AAC6D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811CC2B7929BC00AAC6D5 /* ContentView.swift */; };
+		CB1811CF2B7929BD00AAC6D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1811CE2B7929BD00AAC6D5 /* Assets.xcassets */; };
+		CB1811D22B7929BD00AAC6D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1811D12B7929BD00AAC6D5 /* Preview Assets.xcassets */; };
+		CB1811DC2B7929BD00AAC6D5 /* CueBand_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811DB2B7929BD00AAC6D5 /* CueBand_Watch_AppTests.swift */; };
+		CB1811E62B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811E52B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift */; };
+		CB1811E82B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811E72B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB1811C72B7929BC00AAC6D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB1811B92B7929BC00AAC6D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB1811C42B7929BC00AAC6D5;
+			remoteInfo = "CueBand Watch App";
+		};
+		CB1811D82B7929BD00AAC6D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB1811B92B7929BC00AAC6D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB1811C42B7929BC00AAC6D5;
+			remoteInfo = "CueBand Watch App";
+		};
+		CB1811E22B7929BD00AAC6D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB1811B92B7929BC00AAC6D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB1811C42B7929BC00AAC6D5;
+			remoteInfo = "CueBand Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CB1811EE2B7929BE00AAC6D5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CB1811C62B7929BC00AAC6D5 /* CueBand Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CB1811BF2B7929BC00AAC6D5 /* CueBand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CueBand.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1811C52B7929BC00AAC6D5 /* CueBand Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CueBand Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1811CA2B7929BC00AAC6D5 /* CueBandApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueBandApp.swift; sourceTree = "<group>"; };
+		CB1811CC2B7929BC00AAC6D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CB1811CE2B7929BD00AAC6D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB1811D12B7929BD00AAC6D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CB1811D72B7929BD00AAC6D5 /* CueBand Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CueBand Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1811DB2B7929BD00AAC6D5 /* CueBand_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueBand_Watch_AppTests.swift; sourceTree = "<group>"; };
+		CB1811E12B7929BD00AAC6D5 /* CueBand Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CueBand Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1811E52B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueBand_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		CB1811E72B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueBand_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB1811C22B7929BC00AAC6D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1811D42B7929BD00AAC6D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1811DE2B7929BD00AAC6D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB1811B82B7929BC00AAC6D5 = {
+			isa = PBXGroup;
+			children = (
+				CB1811C92B7929BC00AAC6D5 /* CueBand Watch App */,
+				CB1811DA2B7929BD00AAC6D5 /* CueBand Watch AppTests */,
+				CB1811E42B7929BD00AAC6D5 /* CueBand Watch AppUITests */,
+				CB1811C02B7929BC00AAC6D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB1811C02B7929BC00AAC6D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB1811BF2B7929BC00AAC6D5 /* CueBand.app */,
+				CB1811C52B7929BC00AAC6D5 /* CueBand Watch App.app */,
+				CB1811D72B7929BD00AAC6D5 /* CueBand Watch AppTests.xctest */,
+				CB1811E12B7929BD00AAC6D5 /* CueBand Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB1811C92B7929BC00AAC6D5 /* CueBand Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				CB1811CA2B7929BC00AAC6D5 /* CueBandApp.swift */,
+				CB1811CC2B7929BC00AAC6D5 /* ContentView.swift */,
+				CB1811CE2B7929BD00AAC6D5 /* Assets.xcassets */,
+				CB1811D02B7929BD00AAC6D5 /* Preview Content */,
+			);
+			path = "CueBand Watch App";
+			sourceTree = "<group>";
+		};
+		CB1811D02B7929BD00AAC6D5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CB1811D12B7929BD00AAC6D5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CB1811DA2B7929BD00AAC6D5 /* CueBand Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB1811DB2B7929BD00AAC6D5 /* CueBand_Watch_AppTests.swift */,
+			);
+			path = "CueBand Watch AppTests";
+			sourceTree = "<group>";
+		};
+		CB1811E42B7929BD00AAC6D5 /* CueBand Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CB1811E52B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift */,
+				CB1811E72B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "CueBand Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB1811BE2B7929BC00AAC6D5 /* CueBand */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB1811EF2B7929BE00AAC6D5 /* Build configuration list for PBXNativeTarget "CueBand" */;
+			buildPhases = (
+				CB1811BD2B7929BC00AAC6D5 /* Resources */,
+				CB1811EE2B7929BE00AAC6D5 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB1811C82B7929BC00AAC6D5 /* PBXTargetDependency */,
+			);
+			name = CueBand;
+			productName = CueBand;
+			productReference = CB1811BF2B7929BC00AAC6D5 /* CueBand.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		CB1811C42B7929BC00AAC6D5 /* CueBand Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB1811EB2B7929BE00AAC6D5 /* Build configuration list for PBXNativeTarget "CueBand Watch App" */;
+			buildPhases = (
+				CB1811C12B7929BC00AAC6D5 /* Sources */,
+				CB1811C22B7929BC00AAC6D5 /* Frameworks */,
+				CB1811C32B7929BC00AAC6D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CueBand Watch App";
+			productName = "CueBand Watch App";
+			productReference = CB1811C52B7929BC00AAC6D5 /* CueBand Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB1811D62B7929BD00AAC6D5 /* CueBand Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB1811F22B7929BE00AAC6D5 /* Build configuration list for PBXNativeTarget "CueBand Watch AppTests" */;
+			buildPhases = (
+				CB1811D32B7929BD00AAC6D5 /* Sources */,
+				CB1811D42B7929BD00AAC6D5 /* Frameworks */,
+				CB1811D52B7929BD00AAC6D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB1811D92B7929BD00AAC6D5 /* PBXTargetDependency */,
+			);
+			name = "CueBand Watch AppTests";
+			productName = "CueBand Watch AppTests";
+			productReference = CB1811D72B7929BD00AAC6D5 /* CueBand Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CB1811E02B7929BD00AAC6D5 /* CueBand Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB1811F52B7929BE00AAC6D5 /* Build configuration list for PBXNativeTarget "CueBand Watch AppUITests" */;
+			buildPhases = (
+				CB1811DD2B7929BD00AAC6D5 /* Sources */,
+				CB1811DE2B7929BD00AAC6D5 /* Frameworks */,
+				CB1811DF2B7929BD00AAC6D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB1811E32B7929BD00AAC6D5 /* PBXTargetDependency */,
+			);
+			name = "CueBand Watch AppUITests";
+			productName = "CueBand Watch AppUITests";
+			productReference = CB1811E12B7929BD00AAC6D5 /* CueBand Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB1811B92B7929BC00AAC6D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					CB1811BE2B7929BC00AAC6D5 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					CB1811C42B7929BC00AAC6D5 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					CB1811D62B7929BD00AAC6D5 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = CB1811C42B7929BC00AAC6D5;
+					};
+					CB1811E02B7929BD00AAC6D5 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = CB1811C42B7929BC00AAC6D5;
+					};
+				};
+			};
+			buildConfigurationList = CB1811BC2B7929BC00AAC6D5 /* Build configuration list for PBXProject "CueBand" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB1811B82B7929BC00AAC6D5;
+			productRefGroup = CB1811C02B7929BC00AAC6D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB1811BE2B7929BC00AAC6D5 /* CueBand */,
+				CB1811C42B7929BC00AAC6D5 /* CueBand Watch App */,
+				CB1811D62B7929BD00AAC6D5 /* CueBand Watch AppTests */,
+				CB1811E02B7929BD00AAC6D5 /* CueBand Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB1811BD2B7929BC00AAC6D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1811C32B7929BC00AAC6D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1811D22B7929BD00AAC6D5 /* Preview Assets.xcassets in Resources */,
+				CB1811CF2B7929BD00AAC6D5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1811D52B7929BD00AAC6D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1811DF2B7929BD00AAC6D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB1811C12B7929BC00AAC6D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1811CD2B7929BC00AAC6D5 /* ContentView.swift in Sources */,
+				CB1811CB2B7929BC00AAC6D5 /* CueBandApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1811D32B7929BD00AAC6D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1811DC2B7929BD00AAC6D5 /* CueBand_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1811DD2B7929BD00AAC6D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1811E62B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift in Sources */,
+				CB1811E82B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB1811C82B7929BC00AAC6D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB1811C42B7929BC00AAC6D5 /* CueBand Watch App */;
+			targetProxy = CB1811C72B7929BC00AAC6D5 /* PBXContainerItemProxy */;
+		};
+		CB1811D92B7929BD00AAC6D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB1811C42B7929BC00AAC6D5 /* CueBand Watch App */;
+			targetProxy = CB1811D82B7929BD00AAC6D5 /* PBXContainerItemProxy */;
+		};
+		CB1811E32B7929BD00AAC6D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB1811C42B7929BC00AAC6D5 /* CueBand Watch App */;
+			targetProxy = CB1811E22B7929BD00AAC6D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CB1811E92B7929BE00AAC6D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB1811EA2B7929BE00AAC6D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		CB1811EC2B7929BE00AAC6D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CueBand Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CueBand;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CueBand.CueBand.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		CB1811ED2B7929BE00AAC6D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CueBand Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CueBand;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CueBand.CueBand.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
+		CB1811F02B7929BE00AAC6D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_KEY_CFBundleDisplayName = CueBand;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CueBand.CueBand;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CB1811F12B7929BE00AAC6D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_KEY_CFBundleDisplayName = CueBand;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CueBand.CueBand;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB1811F32B7929BE00AAC6D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CueBand.CueBand-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CueBand Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CueBand Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		CB1811F42B7929BE00AAC6D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CueBand.CueBand-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CueBand Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CueBand Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
+		CB1811F62B7929BE00AAC6D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CueBand.CueBand-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "CueBand Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		CB1811F72B7929BE00AAC6D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "CueBand.CueBand-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "CueBand Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB1811BC2B7929BC00AAC6D5 /* Build configuration list for PBXProject "CueBand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB1811E92B7929BE00AAC6D5 /* Debug */,
+				CB1811EA2B7929BE00AAC6D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB1811EB2B7929BE00AAC6D5 /* Build configuration list for PBXNativeTarget "CueBand Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB1811EC2B7929BE00AAC6D5 /* Debug */,
+				CB1811ED2B7929BE00AAC6D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB1811EF2B7929BE00AAC6D5 /* Build configuration list for PBXNativeTarget "CueBand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB1811F02B7929BE00AAC6D5 /* Debug */,
+				CB1811F12B7929BE00AAC6D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB1811F22B7929BE00AAC6D5 /* Build configuration list for PBXNativeTarget "CueBand Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB1811F32B7929BE00AAC6D5 /* Debug */,
+				CB1811F42B7929BE00AAC6D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB1811F52B7929BE00AAC6D5 /* Build configuration list for PBXNativeTarget "CueBand Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB1811F62B7929BE00AAC6D5 /* Debug */,
+				CB1811F72B7929BE00AAC6D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB1811B92B7929BC00AAC6D5 /* Project object */;
+}
