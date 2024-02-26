@@ -15,6 +15,7 @@
 		CB1811DC2B7929BD00AAC6D5 /* CueBand_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811DB2B7929BD00AAC6D5 /* CueBand_Watch_AppTests.swift */; };
 		CB1811E62B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811E52B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift */; };
 		CB1811E82B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811E72B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift */; };
+		CB88413E2B8CE67900CFA352 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88413D2B8CE67900CFA352 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		CB1811E12B7929BD00AAC6D5 /* CueBand Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CueBand Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1811E52B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueBand_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		CB1811E72B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueBand_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CB88413D2B8CE67900CFA352 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				CB1811CC2B7929BC00AAC6D5 /* ContentView.swift */,
 				CB1811CE2B7929BD00AAC6D5 /* Assets.xcassets */,
 				CB1811D02B7929BD00AAC6D5 /* Preview Content */,
+				CB88413D2B8CE67900CFA352 /* SettingsView.swift */,
 			);
 			path = "CueBand Watch App";
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB88413E2B8CE67900CFA352 /* SettingsView.swift in Sources */,
 				CB1811CD2B7929BC00AAC6D5 /* ContentView.swift in Sources */,
 				CB1811CB2B7929BC00AAC6D5 /* CueBandApp.swift in Sources */,
 			);
