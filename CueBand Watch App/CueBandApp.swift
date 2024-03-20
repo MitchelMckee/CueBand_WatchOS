@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@main
 struct CueBand_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {

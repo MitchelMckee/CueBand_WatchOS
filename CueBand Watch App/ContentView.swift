@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+@main
+struct CueBandApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
+
 struct ContentView: View {
     var body: some View {
         VStack {
@@ -14,9 +23,9 @@ struct ContentView: View {
                 Text("Start")
             }
         }
-        .padding()
     }
 }
+
 
 #Preview {
     ContentView()
