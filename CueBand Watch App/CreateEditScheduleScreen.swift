@@ -9,8 +9,37 @@ import SwiftUI
 
 struct CreateEditScheduleScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+        VStack(spacing: 10){
+            Button("Edit Schedule"){
+            }
+            .frame(maxWidth: .infinity)
+            .padding()
+            .background(Color.black)
+            .foregroundColor(.white)
+            
+            
+            Button("New Schedule"){
+                
+            }
+            .frame(maxWidth: .infinity)
+            .padding()
+            .background(Color.black)
+            
+            
+            Button(action: {
+                
+            }) {
+                Text("Back")
+                    .font(.title2)
+                    .foregroundColor(Color.white)
+                    .padding(.vertical)
+            }
+        }
+            .padding()
+            .background(Color.white)
+//            .edgesIgnoringSafeArea(.all)
+        }
+
 }
 
 #Preview {
