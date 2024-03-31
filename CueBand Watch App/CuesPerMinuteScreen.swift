@@ -22,7 +22,7 @@ struct SettingsView: View {
                     }
                     
                 }) {
-                    Text("-")
+                    Text("➖")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
@@ -47,7 +47,7 @@ struct SettingsView: View {
                         self.setting += increment_amount
                     }
                 }) {
-                    Text("+")
+                    Text("➕")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
