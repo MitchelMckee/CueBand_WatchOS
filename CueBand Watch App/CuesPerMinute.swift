@@ -1,15 +1,16 @@
 //
-//  VibrationIntervalScreen.swift
+//  ActiveCueingScreen.swift
 //  CueBand Watch App
 //
-//  Created by Mitchel Mckee on 29/03/2024.
+//  Created by Mitchel Mckee on 11/03/2024.
 //
 
 import SwiftUI
 
-struct VibrationIntervalScreen: View {
-    @State private var setting = 5
-    @State private var increment_amount = 30
+struct CuesPerMinute: View {
+    @EnvironmentObject var navigationCoordinator: NavigationCoordinator
+    @State private var setting = 1
+    @State private var increment_amount = 1
     @State private var radius_amount = CGFloat(60)
     @State private var object_color = Color.black
 
@@ -17,7 +18,7 @@ struct VibrationIntervalScreen: View {
         VStack(spacing: 20) {
             HStack {
                 Button(action: {
-                    if setting > 5  {
+                    if setting > 1  {
                         self.setting -= increment_amount
                     }
                     
@@ -32,9 +33,8 @@ struct VibrationIntervalScreen: View {
 
                 Spacer()
 
-                Text("every "+"\(setting)"+" seconds")
-                    .font(.caption2)
-                    .multilineTextAlignment(.center)
+                Text("x"+"\(setting)")
+                    .font(.largeTitle)
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(width: 70, height: 60)
                     .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
@@ -42,7 +42,7 @@ struct VibrationIntervalScreen: View {
                 Spacer()
 
                 Button(action: {
-                    if setting >= 240 {
+                    if setting >= 6 {
                         self.setting = self.setting
                     } else {
                         self.setting += increment_amount
@@ -61,7 +61,7 @@ struct VibrationIntervalScreen: View {
 
             HStack {
                 Button(action: {
-                    // Action for Back Button
+                    navigationCoordinator.navigate(to: .start)
                 }) {
                     Text("Back")
                         .font(.title3)
@@ -74,7 +74,7 @@ struct VibrationIntervalScreen: View {
                 Button(action: {
                     // Action for Next Button
                 }) {
-                    Text("Start")
+                    Text("Next")
                         .font(.title3)
                         .padding()
                         .background(Rectangle().fill(object_color).cornerRadius(10))
@@ -83,9 +83,15 @@ struct VibrationIntervalScreen: View {
         }
         .padding()
         .background(Color.white)
+//        .toolbar {
+//                        ToolbarItem(placement: .navigationBarLeading) {
+//                        }
+//                    }
     }
 }
 
-#Preview {
-    VibrationIntervalScreen()
+struct SettingsView_Previews: PreviewProvider {
+    static var previews: some View {
+        CuesPerMinute().environmentObject(NavigationCoordinator())
+    }
 }

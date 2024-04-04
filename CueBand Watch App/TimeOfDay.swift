@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct TimeOfDayScreen: View {
+struct TimeOfDay: View {
+    @EnvironmentObject var navigationCoordinator: NavigationCoordinator
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    TimeOfDayScreen()
+    TimeOfDay()
 }

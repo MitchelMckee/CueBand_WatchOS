@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB08ADD62BB6E58A007FD97A /* VibrationIntervalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08ADD52BB6E58A007FD97A /* VibrationIntervalScreen.swift */; };
-		CB08ADD82BB6E744007FD97A /* ScheduleTimeOfDayScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08ADD72BB6E744007FD97A /* ScheduleTimeOfDayScreen.swift */; };
-		CB16FA552B9FA202007E3479 /* ActiveCueingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16FA542B9FA202007E3479 /* ActiveCueingScreen.swift */; };
+		CB08ADD62BB6E58A007FD97A /* VibrationInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08ADD52BB6E58A007FD97A /* VibrationInterval.swift */; };
+		CB08ADD82BB6E744007FD97A /* ScheduleTimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08ADD72BB6E744007FD97A /* ScheduleTimeOfDay.swift */; };
+		CB16FA552B9FA202007E3479 /* ActiveCueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16FA542B9FA202007E3479 /* ActiveCueing.swift */; };
 		CB1811CB2B7929BC00AAC6D5 /* CueBandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811CA2B7929BC00AAC6D5 /* CueBandApp.swift */; };
-		CB1811CD2B7929BC00AAC6D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811CC2B7929BC00AAC6D5 /* ContentView.swift */; };
 		CB1811CF2B7929BD00AAC6D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1811CE2B7929BD00AAC6D5 /* Assets.xcassets */; };
 		CB1811D22B7929BD00AAC6D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1811D12B7929BD00AAC6D5 /* Preview Assets.xcassets */; };
 		CB1811DC2B7929BD00AAC6D5 /* CueBand_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811DB2B7929BD00AAC6D5 /* CueBand_Watch_AppTests.swift */; };
 		CB1811E62B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811E52B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift */; };
 		CB1811E82B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811E72B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift */; };
 		CB4FF9E62BAB7AEB00A06D1C /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9E52BAB7AEB00A06D1C /* StartView.swift */; };
-		CB4FF9E82BAB808700A06D1C /* CueingLengthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9E72BAB808700A06D1C /* CueingLengthScreen.swift */; };
-		CB4FF9EC2BAB828900A06D1C /* CreateEditScheduleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9EB2BAB828900A06D1C /* CreateEditScheduleScreen.swift */; };
-		CB4FF9EE2BAB829C00A06D1C /* TimeOfDayScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9ED2BAB829C00A06D1C /* TimeOfDayScreen.swift */; };
-		CB88413E2B8CE67900CFA352 /* CuesPerMinuteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88413D2B8CE67900CFA352 /* CuesPerMinuteScreen.swift */; };
+		CB4FF9E82BAB808700A06D1C /* CueingLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9E72BAB808700A06D1C /* CueingLength.swift */; };
+		CB4FF9EC2BAB828900A06D1C /* CreateEditSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */; };
+		CB4FF9EE2BAB829C00A06D1C /* TimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */; };
+		CB88413E2B8CE67900CFA352 /* CuesPerMinute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88413D2B8CE67900CFA352 /* CuesPerMinute.swift */; };
 		CBB69B452BB9B4B500FCD7FE /* PhoneInterfaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB69B442BB9B4B500FCD7FE /* PhoneInterfaceApp.swift */; };
 		CBB69B472BB9B4B500FCD7FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB69B462BB9B4B500FCD7FE /* ContentView.swift */; };
 		CBB69B492BB9B4B600FCD7FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB69B482BB9B4B600FCD7FE /* Assets.xcassets */; };
 		CBB69B4C2BB9B4B600FCD7FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB69B4B2BB9B4B600FCD7FE /* Preview Assets.xcassets */; };
+		CBD86F472BBE244E00FAAA62 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD86F462BBE244E00FAAA62 /* NavigationCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,12 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB08ADD52BB6E58A007FD97A /* VibrationIntervalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationIntervalScreen.swift; sourceTree = "<group>"; };
-		CB08ADD72BB6E744007FD97A /* ScheduleTimeOfDayScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTimeOfDayScreen.swift; sourceTree = "<group>"; };
-		CB16FA542B9FA202007E3479 /* ActiveCueingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCueingScreen.swift; sourceTree = "<group>"; };
+		CB08ADD52BB6E58A007FD97A /* VibrationInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationInterval.swift; sourceTree = "<group>"; };
+		CB08ADD72BB6E744007FD97A /* ScheduleTimeOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTimeOfDay.swift; sourceTree = "<group>"; };
+		CB16FA542B9FA202007E3479 /* ActiveCueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCueing.swift; sourceTree = "<group>"; };
 		CB1811C52B7929BC00AAC6D5 /* CueBand Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CueBand Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1811CA2B7929BC00AAC6D5 /* CueBandApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueBandApp.swift; sourceTree = "<group>"; };
-		CB1811CC2B7929BC00AAC6D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB1811CE2B7929BD00AAC6D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB1811D12B7929BD00AAC6D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CB1811D72B7929BD00AAC6D5 /* CueBand Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CueBand Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,15 +59,16 @@
 		CB1811E52B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueBand_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		CB1811E72B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueBand_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CB4FF9E52BAB7AEB00A06D1C /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
-		CB4FF9E72BAB808700A06D1C /* CueingLengthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueingLengthScreen.swift; sourceTree = "<group>"; };
-		CB4FF9EB2BAB828900A06D1C /* CreateEditScheduleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEditScheduleScreen.swift; sourceTree = "<group>"; };
-		CB4FF9ED2BAB829C00A06D1C /* TimeOfDayScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDayScreen.swift; sourceTree = "<group>"; };
-		CB88413D2B8CE67900CFA352 /* CuesPerMinuteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuesPerMinuteScreen.swift; sourceTree = "<group>"; };
+		CB4FF9E72BAB808700A06D1C /* CueingLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueingLength.swift; sourceTree = "<group>"; };
+		CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEditSchedule.swift; sourceTree = "<group>"; };
+		CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDay.swift; sourceTree = "<group>"; };
+		CB88413D2B8CE67900CFA352 /* CuesPerMinute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuesPerMinute.swift; sourceTree = "<group>"; };
 		CBB69B422BB9B4B500FCD7FE /* PhoneInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB69B442BB9B4B500FCD7FE /* PhoneInterfaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInterfaceApp.swift; sourceTree = "<group>"; };
 		CBB69B462BB9B4B500FCD7FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CBB69B482BB9B4B600FCD7FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB69B4B2BB9B4B600FCD7FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CBD86F462BBE244E00FAAA62 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,17 +129,17 @@
 			isa = PBXGroup;
 			children = (
 				CB1811CA2B7929BC00AAC6D5 /* CueBandApp.swift */,
-				CB1811CC2B7929BC00AAC6D5 /* ContentView.swift */,
 				CB1811CE2B7929BD00AAC6D5 /* Assets.xcassets */,
+				CBD86F462BBE244E00FAAA62 /* NavigationCoordinator.swift */,
 				CB1811D02B7929BD00AAC6D5 /* Preview Content */,
-				CB88413D2B8CE67900CFA352 /* CuesPerMinuteScreen.swift */,
-				CB08ADD72BB6E744007FD97A /* ScheduleTimeOfDayScreen.swift */,
-				CB4FF9EB2BAB828900A06D1C /* CreateEditScheduleScreen.swift */,
-				CB08ADD52BB6E58A007FD97A /* VibrationIntervalScreen.swift */,
-				CB4FF9ED2BAB829C00A06D1C /* TimeOfDayScreen.swift */,
-				CB4FF9E72BAB808700A06D1C /* CueingLengthScreen.swift */,
+				CB88413D2B8CE67900CFA352 /* CuesPerMinute.swift */,
+				CB08ADD72BB6E744007FD97A /* ScheduleTimeOfDay.swift */,
+				CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */,
+				CB08ADD52BB6E58A007FD97A /* VibrationInterval.swift */,
+				CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */,
+				CB4FF9E72BAB808700A06D1C /* CueingLength.swift */,
 				CB4FF9E52BAB7AEB00A06D1C /* StartView.swift */,
-				CB16FA542B9FA202007E3479 /* ActiveCueingScreen.swift */,
+				CB16FA542B9FA202007E3479 /* ActiveCueing.swift */,
 			);
 			path = "CueBand Watch App";
 			sourceTree = "<group>";
@@ -348,15 +348,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB88413E2B8CE67900CFA352 /* CuesPerMinuteScreen.swift in Sources */,
-				CB08ADD82BB6E744007FD97A /* ScheduleTimeOfDayScreen.swift in Sources */,
-				CB4FF9EC2BAB828900A06D1C /* CreateEditScheduleScreen.swift in Sources */,
-				CB4FF9EE2BAB829C00A06D1C /* TimeOfDayScreen.swift in Sources */,
+				CB88413E2B8CE67900CFA352 /* CuesPerMinute.swift in Sources */,
+				CB08ADD82BB6E744007FD97A /* ScheduleTimeOfDay.swift in Sources */,
+				CB4FF9EC2BAB828900A06D1C /* CreateEditSchedule.swift in Sources */,
+				CB4FF9EE2BAB829C00A06D1C /* TimeOfDay.swift in Sources */,
 				CB4FF9E62BAB7AEB00A06D1C /* StartView.swift in Sources */,
-				CB4FF9E82BAB808700A06D1C /* CueingLengthScreen.swift in Sources */,
-				CB08ADD62BB6E58A007FD97A /* VibrationIntervalScreen.swift in Sources */,
-				CB1811CD2B7929BC00AAC6D5 /* ContentView.swift in Sources */,
-				CB16FA552B9FA202007E3479 /* ActiveCueingScreen.swift in Sources */,
+				CB4FF9E82BAB808700A06D1C /* CueingLength.swift in Sources */,
+				CB08ADD62BB6E58A007FD97A /* VibrationInterval.swift in Sources */,
+				CB16FA552B9FA202007E3479 /* ActiveCueing.swift in Sources */,
+				CBD86F472BBE244E00FAAA62 /* NavigationCoordinator.swift in Sources */,
 				CB1811CB2B7929BC00AAC6D5 /* CueBandApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,7 +602,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CueBand Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CueBand Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
 			};
 			name = Debug;
 		};
@@ -623,7 +623,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CueBand Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CueBand Watch App";
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
 			};
 			name = Release;
 		};
@@ -642,7 +642,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = "CueBand Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
 			};
 			name = Debug;
 		};
@@ -662,7 +662,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = "CueBand Watch App";
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
 			};
 			name = Release;
 		};

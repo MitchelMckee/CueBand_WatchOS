@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct CreateEditScheduleScreen: View {
+struct CreateEditSchedule: View {
+    @EnvironmentObject var navigationCoordinator: NavigationCoordinator
     var body: some View {
         VStack(spacing: 10){
             Button("Edit Schedule"){
@@ -43,5 +44,5 @@ struct CreateEditScheduleScreen: View {
 }
 
 #Preview {
-    CreateEditScheduleScreen()
+    CreateEditSchedule()
 }

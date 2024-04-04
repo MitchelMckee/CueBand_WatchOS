@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct ScheduleTimeOfDayScreen: View {
+struct ScheduleTimeOfDay: View {
+    @EnvironmentObject var navigationCoordinator: NavigationCoordinator
     @State private var setting = 0
     @State private var times_of_day = ["Morning", "Afternoon", "Evening"]
     @State private var increment_amount = 1
@@ -80,5 +81,5 @@ struct ScheduleTimeOfDayScreen: View {
 }
 
 #Preview {
-    ScheduleTimeOfDayScreen()
+    ScheduleTimeOfDay()
 }

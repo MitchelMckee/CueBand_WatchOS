@@ -8,7 +8,8 @@
 import SwiftUI
 import WatchKit
 
-struct ActiveCueingScreen: View {
+struct ActiveCueing: View {
+    @EnvironmentObject var navigationCoordinator: NavigationCoordinator
     @State private var time_remaining = 3600
     @State private var timer_is_active = false
     @State private var radius_amount = CGFloat(10)
@@ -95,7 +96,6 @@ private func triggerVibrations(repeatCount: Int){
 }
 
 
-
 struct CustomButtonStyle: ButtonStyle {
     var color: Color
     var textColor: Color
@@ -114,6 +114,6 @@ struct CustomButtonStyle: ButtonStyle {
 
 struct ActiveCueingScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveCueingScreen()
+        ActiveCueing()
     }
 }
