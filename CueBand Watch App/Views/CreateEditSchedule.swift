@@ -43,6 +43,10 @@ struct CreateEditSchedule: View {
 
 }
 
-#Preview {
-    CreateEditSchedule()
+struct CreateEditSchedule_Preview: PreviewProvider {
+    static var previews: some View {
+        CuesPerMinute()
+            .environmentObject(NavigationCoordinator())
+            .environmentObject(ActiveCueingSettings())
+    }
 }

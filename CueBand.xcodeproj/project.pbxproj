@@ -16,6 +16,8 @@
 		CB1811DC2B7929BD00AAC6D5 /* CueBand_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811DB2B7929BD00AAC6D5 /* CueBand_Watch_AppTests.swift */; };
 		CB1811E62B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811E52B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift */; };
 		CB1811E82B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811E72B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift */; };
+		CB2D6A792BC0813B00B62E61 /* ActiveCueingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2D6A782BC0813B00B62E61 /* ActiveCueingSettings.swift */; };
+		CB2D6A7B2BC1B04C00B62E61 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2D6A7A2BC1B04C00B62E61 /* CustomButtonStyle.swift */; };
 		CB4FF9E62BAB7AEB00A06D1C /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9E52BAB7AEB00A06D1C /* StartView.swift */; };
 		CB4FF9E82BAB808700A06D1C /* CueingLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9E72BAB808700A06D1C /* CueingLength.swift */; };
 		CB4FF9EC2BAB828900A06D1C /* CreateEditSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */; };
@@ -58,6 +60,8 @@
 		CB1811E12B7929BD00AAC6D5 /* CueBand Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CueBand Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1811E52B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueBand_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		CB1811E72B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueBand_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CB2D6A782BC0813B00B62E61 /* ActiveCueingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCueingSettings.swift; sourceTree = "<group>"; };
+		CB2D6A7A2BC1B04C00B62E61 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		CB4FF9E52BAB7AEB00A06D1C /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		CB4FF9E72BAB808700A06D1C /* CueingLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueingLength.swift; sourceTree = "<group>"; };
 		CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEditSchedule.swift; sourceTree = "<group>"; };
@@ -130,16 +134,9 @@
 			children = (
 				CB1811CA2B7929BC00AAC6D5 /* CueBandApp.swift */,
 				CB1811CE2B7929BD00AAC6D5 /* Assets.xcassets */,
-				CBD86F462BBE244E00FAAA62 /* NavigationCoordinator.swift */,
 				CB1811D02B7929BD00AAC6D5 /* Preview Content */,
-				CB88413D2B8CE67900CFA352 /* CuesPerMinute.swift */,
-				CB08ADD72BB6E744007FD97A /* ScheduleTimeOfDay.swift */,
-				CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */,
-				CB08ADD52BB6E58A007FD97A /* VibrationInterval.swift */,
-				CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */,
-				CB4FF9E72BAB808700A06D1C /* CueingLength.swift */,
-				CB4FF9E52BAB7AEB00A06D1C /* StartView.swift */,
-				CB16FA542B9FA202007E3479 /* ActiveCueing.swift */,
+				CB2D6A7D2BC1D60200B62E61 /* Views */,
+				CB2D6A7C2BC1C1A300B62E61 /* Config */,
 			);
 			path = "CueBand Watch App";
 			sourceTree = "<group>";
@@ -167,6 +164,31 @@
 				CB1811E72B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "CueBand Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		CB2D6A7C2BC1C1A300B62E61 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				CBD86F462BBE244E00FAAA62 /* NavigationCoordinator.swift */,
+				CB2D6A7A2BC1B04C00B62E61 /* CustomButtonStyle.swift */,
+				CB2D6A782BC0813B00B62E61 /* ActiveCueingSettings.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		CB2D6A7D2BC1D60200B62E61 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB88413D2B8CE67900CFA352 /* CuesPerMinute.swift */,
+				CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */,
+				CB08ADD52BB6E58A007FD97A /* VibrationInterval.swift */,
+				CB08ADD72BB6E744007FD97A /* ScheduleTimeOfDay.swift */,
+				CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */,
+				CB4FF9E72BAB808700A06D1C /* CueingLength.swift */,
+				CB4FF9E52BAB7AEB00A06D1C /* StartView.swift */,
+				CB16FA542B9FA202007E3479 /* ActiveCueing.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CBB69B432BB9B4B500FCD7FE /* PhoneInterface */ = {
@@ -354,9 +376,11 @@
 				CB4FF9EE2BAB829C00A06D1C /* TimeOfDay.swift in Sources */,
 				CB4FF9E62BAB7AEB00A06D1C /* StartView.swift in Sources */,
 				CB4FF9E82BAB808700A06D1C /* CueingLength.swift in Sources */,
+				CB2D6A7B2BC1B04C00B62E61 /* CustomButtonStyle.swift in Sources */,
 				CB08ADD62BB6E58A007FD97A /* VibrationInterval.swift in Sources */,
 				CB16FA552B9FA202007E3479 /* ActiveCueing.swift in Sources */,
 				CBD86F472BBE244E00FAAA62 /* NavigationCoordinator.swift in Sources */,
+				CB2D6A792BC0813B00B62E61 /* ActiveCueingSettings.swift in Sources */,
 				CB1811CB2B7929BC00AAC6D5 /* CueBandApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

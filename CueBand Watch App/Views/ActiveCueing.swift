@@ -52,12 +52,13 @@ struct ActiveCueing: View {
 // Stop Button ---------------------------------------------------------------------------------
                 Button(action: {
                     self.timer_is_active = false
+                    navigationCoordinator.navigate(to: .start)
                 }) {
                 
                     Text("🛑")
                         .font(.title2)
                 }
-                .buttonStyle(CustomButtonStyle(color: .black, textColor: .white))
+                .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: 60, height: 60, radius: 10))
 
 // Settings Button -----------------------------------------------------------------------------
                 Button(action: {
@@ -67,7 +68,7 @@ struct ActiveCueing: View {
                         .font(.title2)
 
                 }
-                .buttonStyle(CustomButtonStyle(color: .black, textColor: .white))
+                .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: 60, height: 60, radius: 10))
             }
         }
         .padding()
@@ -92,23 +93,6 @@ private func triggerVibrations(repeatCount: Int){
             WKInterfaceDevice.current().play(.click)
             }
         }
-    }
-}
-
-
-struct CustomButtonStyle: ButtonStyle {
-    var color: Color
-    var textColor: Color
-    
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .shadow(radius: 10)
-            .frame(width: 60, height: 60)
-            .background(color)
-            .foregroundColor(textColor)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .scaleEffect(configuration.isPressed ? 0.8 : 1.0)
-            .animation(.easeOut, value: configuration.isPressed)
     }
 }
 

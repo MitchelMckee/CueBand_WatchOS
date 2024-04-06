@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class NavigationCoordinator: ObservableObject {
     @Published var currentPage: Page = .start
@@ -22,7 +23,9 @@ class NavigationCoordinator: ObservableObject {
     }
     
     func navigate(to page: Page) {
-        self.currentPage = page
+        withAnimation{
+            self.currentPage = page
+        }
     }
 }
 

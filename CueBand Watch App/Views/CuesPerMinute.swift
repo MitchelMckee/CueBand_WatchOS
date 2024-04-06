@@ -1,43 +1,27 @@
 //
-//  CueingLengthScreen.swift
+//  ActiveCueingScreen.swift
 //  CueBand Watch App
 //
-//  Created by Mitchel Mckee on 20/03/2024.
+//  Created by Mitchel Mckee on 11/03/2024.
 //
 
 import SwiftUI
 
-struct CueingLength: View {
+struct CuesPerMinute: View {
     @EnvironmentObject var navigationCoordinator: NavigationCoordinator
-    @State private var setting = 0
-    @State private var increment_amount = 10
+    @EnvironmentObject var settings: ActiveCueingSettings
+    @State private var increment_amount = 1
     @State private var radius_amount = CGFloat(60)
     @State private var object_color = Color.black
-    @State private var current_time = Date()
-    
-    private var finish_time: Date {
-            return Calendar.current.date(byAdding: .minute, value: setting, to: current_time)!
-        }
-    
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
-    
     var body: some View {
-        
         VStack(spacing: 20) {
-            Text(finish_time, style: .time)
-                .onReceive(timer) { input in
-                    current_time = input
-                }
-                .font(.title3)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(width: 100, height: 30)
-                .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
             HStack {
                 Button(action: {
-                    if setting != 0 {
-                        setting = max(0, setting - increment_amount)
+                    if settings.cues_per_minute > 1  {
+                        self.settings.cues_per_minute -= increment_amount
                     }
+                    
                 }) {
                     Text("➖")
                         .font(.title2)
@@ -46,21 +30,22 @@ struct CueingLength: View {
                         .frame(width: 50, height: 40)
                         .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
-
+                
                 Spacer()
-
-                Text("\(setting)"+"\nmins")
-                    .font(.title3)
-                    .multilineTextAlignment(.center)
+                
+                Text("x"+"\(settings.cues_per_minute)")
+                    .font(.largeTitle)
                     .fixedSize(horizontal: false, vertical: true)
-                    .frame(width: 80, height: 60)
+                    .frame(width: 70, height: 60)
                     .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
-
+                
                 Spacer()
-
+                
                 Button(action: {
-                    if setting < 60{
-                        setting += increment_amount
+                    if settings.cues_per_minute >= 6 {
+                        self.settings.cues_per_minute = self.settings.cues_per_minute
+                    } else {
+                        self.settings.cues_per_minute += increment_amount
                     }
                 }) {
                     Text("➕")
@@ -71,25 +56,25 @@ struct CueingLength: View {
                         .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
             }
-
+            
             Spacer()
-
+            
             HStack {
                 Button(action: {
-                    // Action for Back Button
+                    navigationCoordinator.navigate(to: .start)
                 }) {
                     Text("Back")
                         .font(.title3)
                         .padding()
                         .background(Rectangle().fill(object_color).cornerRadius(10))
                 }
-
+                
                 Spacer()
-
+                
                 Button(action: {
-                    // Action for Next Button
+                    navigationCoordinator.navigate(to: .cueingLength)
                 }) {
-                    Text("Start")
+                    Text("Next")
                         .font(.title3)
                         .padding()
                         .background(Rectangle().fill(object_color).cornerRadius(10))
@@ -101,7 +86,10 @@ struct CueingLength: View {
     }
 }
 
-#Preview {
-    CueingLength()
+struct CuesPerMinute_Preview: PreviewProvider {
+    static var previews: some View {
+        CuesPerMinute()
+            .environmentObject(NavigationCoordinator())
+            .environmentObject(ActiveCueingSettings())
+    }
 }
-
