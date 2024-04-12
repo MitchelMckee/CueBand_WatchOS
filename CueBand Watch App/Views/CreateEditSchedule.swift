@@ -9,43 +9,44 @@ import SwiftUI
 
 struct CreateEditSchedule: View {
     @EnvironmentObject var navigationCoordinator: NavigationCoordinator
+    
     var body: some View {
-        VStack(spacing: 10){
-            Button("Edit Schedule"){
-            }
-            .frame(maxWidth: .infinity)
-            .padding()
-            .background(Color.black)
-            .foregroundColor(.white)
-            
-            
-            Button("New Schedule"){
-                
-            }
-            .frame(maxWidth: .infinity)
-            .padding()
-            .background(Color.black)
-            
-            
-            Button(action: {
-                
-            }) {
-                Text("Back")
-                    .font(.title2)
-                    .foregroundColor(Color.white)
-                    .padding(.vertical)
-            }
-        }
-            .padding()
-            .background(Color.white)
-//            .edgesIgnoringSafeArea(.all)
-        }
+        
+        let screen_bounds = WKInterfaceDevice.current().screenBounds
+        let max_button_width = screen_bounds.width * 0.9
+        let spacing = screen_bounds.width * 0.2
+        
+        VStack(spacing: spacing) {
+                  Spacer()
+                  Button("Edit Schedule") {
+                      navigationCoordinator.navigate(to: .cuesPerMinute)
+                  }
+                  .multilineTextAlignment(.center)
+                  .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))
+                  .font(.title3)
+                  .bold()
+                  
+                  
+                  Button("Create Schedule") {
+                      navigationCoordinator.navigate(to: .scheduleTimeOfDay)
+                  }
+                  .multilineTextAlignment(.center)
+                  .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))
+                  .font(.title3)
+                  .bold()
+                  
+                  Spacer()
+              }
 
-}
+              .frame(maxWidth: .infinity, maxHeight: .infinity)
+              .edgesIgnoringSafeArea(.all)
+              .background(Color.white)
+          }
+      }
 
 struct CreateEditSchedule_Preview: PreviewProvider {
     static var previews: some View {
-        CuesPerMinute()
+        CreateEditSchedule()
             .environmentObject(NavigationCoordinator())
             .environmentObject(ActiveCueingSettings())
     }

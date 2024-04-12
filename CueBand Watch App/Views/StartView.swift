@@ -20,7 +20,7 @@ struct StartView: View {
                   
                   
                   Button("Schedule") {
-                      navigationCoordinator.navigate(to: .scheduleTimeOfDay)
+                      navigationCoordinator.navigate(to: .createEditSchedule)
                   }
                   .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))
                   .font(.title3)
