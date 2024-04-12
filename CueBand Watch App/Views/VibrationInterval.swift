@@ -9,6 +9,8 @@ import SwiftUI
 
 struct VibrationInterval: View {
     @EnvironmentObject var navigationCoordinator: NavigationCoordinator
+    @EnvironmentObject var settings: ActiveCueingSettings
+    
     @State private var setting = 5
     @State private var increment_amount = 30
     @State private var radius_amount = CGFloat(60)
@@ -74,6 +76,7 @@ struct VibrationInterval: View {
 
                 Button(action: {
                     // Action for Next Button
+                    navigationCoordinator.navigate(to: .activeCueing)
                 }) {
                     Text("Start")
                         .font(.title3)
