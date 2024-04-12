@@ -12,10 +12,9 @@ struct CueBand_Watch_AppApp: App {
     
     @StateObject var navigationCoordinator = NavigationCoordinator()
     @StateObject private var activeSettings = ActiveCueingSettings()
-    
+        
     var body: some Scene {
         WindowGroup{
-            Group{
                 switch navigationCoordinator.currentPage {
                 case .start:
                     StartView()
@@ -49,8 +48,6 @@ struct CueBand_Watch_AppApp: App {
                         .environmentObject(navigationCoordinator)
                         .environmentObject(activeSettings)
                 }
-            }
-            .transition(.slide)
         }
     }
 }

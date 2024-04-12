@@ -23,9 +23,7 @@ class NavigationCoordinator: ObservableObject {
     }
     
     func navigate(to page: Page) {
-        withAnimation{
             self.currentPage = page
-        }
     }
 }
 
