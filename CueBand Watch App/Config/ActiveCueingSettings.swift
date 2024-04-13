@@ -8,8 +8,8 @@
 import Foundation
 
 class ActiveCueingSettings: ObservableObject {
-    @Published var cueing_length: Int = 0
-    @Published var time_remaining: Int = 3600
+    @Published var cueing_length: Int = 10 // Changed by user input
+    @Published var time_remaining: Int = 3600 // Changed by timer
     
     private var timer: Timer?
     

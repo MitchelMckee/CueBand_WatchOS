@@ -16,8 +16,10 @@ struct ActiveCueing: View {
     @State private var timer_is_active = false
     @State private var radius_amount = CGFloat(10)
     @State private var cueing_style = 3
-    @State private var cueing_rate = 30
+    @State private var cueing_rate = 1
     @State private var time_since_last_cue = 0
+    
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         
@@ -37,8 +39,20 @@ struct ActiveCueing: View {
                 .frame(width: screen_bounds.width * 0.95, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/)
                 .lineLimit(0)
                 .shadow(radius: 10)
-
-                
+                .onReceive(timer) { _ in
+                    guard timer_is_active else { return }
+                   
+                    if settings.time_remaining > 0 {
+                        settings.time_remaining -= 1
+                        time_since_last_cue += 1
+                        
+                        if time_since_last_cue >= cueing_rate {
+                            time_since_last_cue = 0
+                            triggerVibrations(repeatCount: cueing_style)
+                        }
+                    }
+                    
+                }
             HStack(spacing: spacing) {
                 
 // Stop Button
@@ -84,10 +98,11 @@ private func formatTime(time: Int) -> String {
     return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
     
-private func triggerVibrations(repeatCount: Int){
-    for _ in 0..<repeatCount {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-            WKInterfaceDevice.current().play(.click)
+    private func triggerVibrations(repeatCount: Int){
+        let interval = 0.3
+        for i in 0..<repeatCount {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) * interval) {
+                WKInterfaceDevice.current().play(.click)
             }
         }
     }
