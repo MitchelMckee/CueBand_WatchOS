@@ -21,7 +21,7 @@ struct CueBand_Watch_AppApp: App {
                     StartView()
                         .environmentObject(navigationCoordinator)
                 case .cuesPerMinute:
-                    CuesPerMinute()
+                    CueStyle()
                         .environmentObject(navigationCoordinator)
                         .environmentObject(activeSettings)
                 case .scheduleTimeOfDay:
@@ -35,7 +35,7 @@ struct CueBand_Watch_AppApp: App {
                         .environmentObject(activeSettings)
                         .environmentObject(scheduleSettings)
                 case .vibrationInterval:
-                    VibrationInterval()
+                    CueInterval()
                         .environmentObject(navigationCoordinator)
                         .environmentObject(activeSettings)
                 case .timeOfDay:

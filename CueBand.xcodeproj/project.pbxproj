@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB08ADD62BB6E58A007FD97A /* VibrationInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08ADD52BB6E58A007FD97A /* VibrationInterval.swift */; };
+		CB08ADD62BB6E58A007FD97A /* CueInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08ADD52BB6E58A007FD97A /* CueInterval.swift */; };
 		CB08ADD82BB6E744007FD97A /* ScheduleTimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08ADD72BB6E744007FD97A /* ScheduleTimeOfDay.swift */; };
 		CB16FA552B9FA202007E3479 /* ActiveCueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16FA542B9FA202007E3479 /* ActiveCueing.swift */; };
 		CB1811CB2B7929BC00AAC6D5 /* CueBandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811CA2B7929BC00AAC6D5 /* CueBandApp.swift */; };
@@ -23,8 +23,9 @@
 		CB4FF9E82BAB808700A06D1C /* CueingLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9E72BAB808700A06D1C /* CueingLength.swift */; };
 		CB4FF9EC2BAB828900A06D1C /* CreateEditSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */; };
 		CB4FF9EE2BAB829C00A06D1C /* TimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */; };
-		CB88413E2B8CE67900CFA352 /* CuesPerMinute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88413D2B8CE67900CFA352 /* CuesPerMinute.swift */; };
+		CB88413E2B8CE67900CFA352 /* CueStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88413D2B8CE67900CFA352 /* CueStyle.swift */; };
 		CBB3BD0F2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB3BD0E2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift */; };
+		CBB3BD122BCB0EBB00CA1DE1 /* DaysOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB3BD112BCB0EBB00CA1DE1 /* DaysOfWeek.swift */; };
 		CBB69B452BB9B4B500FCD7FE /* PhoneInterfaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB69B442BB9B4B500FCD7FE /* PhoneInterfaceApp.swift */; };
 		CBB69B472BB9B4B500FCD7FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB69B462BB9B4B500FCD7FE /* ContentView.swift */; };
 		CBB69B492BB9B4B600FCD7FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB69B482BB9B4B600FCD7FE /* Assets.xcassets */; };
@@ -50,7 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB08ADD52BB6E58A007FD97A /* VibrationInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationInterval.swift; sourceTree = "<group>"; };
+		CB08ADD52BB6E58A007FD97A /* CueInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueInterval.swift; sourceTree = "<group>"; };
 		CB08ADD72BB6E744007FD97A /* ScheduleTimeOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTimeOfDay.swift; sourceTree = "<group>"; };
 		CB16FA542B9FA202007E3479 /* ActiveCueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCueing.swift; sourceTree = "<group>"; };
 		CB1811C52B7929BC00AAC6D5 /* CueBand Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CueBand Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,8 +71,9 @@
 		CB4FF9E72BAB808700A06D1C /* CueingLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueingLength.swift; sourceTree = "<group>"; };
 		CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEditSchedule.swift; sourceTree = "<group>"; };
 		CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDay.swift; sourceTree = "<group>"; };
-		CB88413D2B8CE67900CFA352 /* CuesPerMinute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuesPerMinute.swift; sourceTree = "<group>"; };
+		CB88413D2B8CE67900CFA352 /* CueStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueStyle.swift; sourceTree = "<group>"; };
 		CBB3BD0E2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledCueingSettings.swift; sourceTree = "<group>"; };
+		CBB3BD112BCB0EBB00CA1DE1 /* DaysOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfWeek.swift; sourceTree = "<group>"; };
 		CBB69B422BB9B4B500FCD7FE /* PhoneInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB69B442BB9B4B500FCD7FE /* PhoneInterfaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInterfaceApp.swift; sourceTree = "<group>"; };
 		CBB69B462BB9B4B500FCD7FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,8 +143,8 @@
 				CB1811CA2B7929BC00AAC6D5 /* CueBandApp.swift */,
 				CB1811CE2B7929BD00AAC6D5 /* Assets.xcassets */,
 				CB1811D02B7929BD00AAC6D5 /* Preview Content */,
-				CB2D6A7D2BC1D60200B62E61 /* Views */,
 				CB2D6A7C2BC1C1A300B62E61 /* Config */,
+				CB2D6A7D2BC1D60200B62E61 /* Views */,
 			);
 			path = "CueBand Watch App";
 			sourceTree = "<group>";
@@ -187,16 +189,33 @@
 		CB2D6A7D2BC1D60200B62E61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CB88413D2B8CE67900CFA352 /* CuesPerMinute.swift */,
-				CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */,
-				CB08ADD52BB6E58A007FD97A /* VibrationInterval.swift */,
-				CB08ADD72BB6E744007FD97A /* ScheduleTimeOfDay.swift */,
-				CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */,
-				CB4FF9E72BAB808700A06D1C /* CueingLength.swift */,
-				CB4FF9E52BAB7AEB00A06D1C /* StartView.swift */,
-				CB16FA542B9FA202007E3479 /* ActiveCueing.swift */,
+				CBB3BD102BCB0E8900CA1DE1 /* ActiveCueing */,
+				CBB3BD132BCB0EBF00CA1DE1 /* ScheduledCueing */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CBB3BD102BCB0E8900CA1DE1 /* ActiveCueing */ = {
+			isa = PBXGroup;
+			children = (
+				CB88413D2B8CE67900CFA352 /* CueStyle.swift */,
+				CB08ADD52BB6E58A007FD97A /* CueInterval.swift */,
+				CB16FA542B9FA202007E3479 /* ActiveCueing.swift */,
+				CB4FF9E52BAB7AEB00A06D1C /* StartView.swift */,
+				CB4FF9E72BAB808700A06D1C /* CueingLength.swift */,
+			);
+			path = ActiveCueing;
+			sourceTree = "<group>";
+		};
+		CBB3BD132BCB0EBF00CA1DE1 /* ScheduledCueing */ = {
+			isa = PBXGroup;
+			children = (
+				CB08ADD72BB6E744007FD97A /* ScheduleTimeOfDay.swift */,
+				CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */,
+				CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */,
+				CBB3BD112BCB0EBB00CA1DE1 /* DaysOfWeek.swift */,
+			);
+			path = ScheduledCueing;
 			sourceTree = "<group>";
 		};
 		CBB69B432BB9B4B500FCD7FE /* PhoneInterface */ = {
@@ -378,14 +397,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB88413E2B8CE67900CFA352 /* CuesPerMinute.swift in Sources */,
+				CB88413E2B8CE67900CFA352 /* CueStyle.swift in Sources */,
 				CB08ADD82BB6E744007FD97A /* ScheduleTimeOfDay.swift in Sources */,
 				CB4FF9EC2BAB828900A06D1C /* CreateEditSchedule.swift in Sources */,
 				CB4FF9EE2BAB829C00A06D1C /* TimeOfDay.swift in Sources */,
 				CB4FF9E62BAB7AEB00A06D1C /* StartView.swift in Sources */,
 				CB4FF9E82BAB808700A06D1C /* CueingLength.swift in Sources */,
 				CB2D6A7B2BC1B04C00B62E61 /* CustomButtonStyle.swift in Sources */,
-				CB08ADD62BB6E58A007FD97A /* VibrationInterval.swift in Sources */,
+				CBB3BD122BCB0EBB00CA1DE1 /* DaysOfWeek.swift in Sources */,
+				CB08ADD62BB6E58A007FD97A /* CueInterval.swift in Sources */,
 				CB16FA552B9FA202007E3479 /* ActiveCueing.swift in Sources */,
 				CBD86F472BBE244E00FAAA62 /* NavigationCoordinator.swift in Sources */,
 				CB2D6A792BC0813B00B62E61 /* ActiveCueingSettings.swift in Sources */,

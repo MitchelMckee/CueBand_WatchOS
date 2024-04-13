@@ -1,33 +1,32 @@
 //
-//  VibrationIntervalScreen.swift
+//  ActiveCueingScreen.swift
 //  CueBand Watch App
 //
-//  Created by Mitchel Mckee on 29/03/2024.
+//  Created by Mitchel Mckee on 11/03/2024.
 //
 
 import SwiftUI
 
-struct VibrationInterval: View {
+struct CueStyle: View {
     @EnvironmentObject var navigationCoordinator: NavigationCoordinator
     @EnvironmentObject var settings: ActiveCueingSettings
-    
-    @State private var setting = 5
-    @State private var increment_amount = 30
+    @State private var increment_amount = 1
     @State private var radius_amount = CGFloat(60)
     @State private var object_color = Color.black
 
     var body: some View {
         
         let screen_bounds = WKInterfaceDevice.current().screenBounds
-        let spacing = screen_bounds.height * 0.1
         let buttonWidth = screen_bounds.width * 0.3
         let buttonHeight = screen_bounds.height * 0.2
+        let indicator = screen_bounds.width * 0.3
+        let spacing = screen_bounds.width * 0.05
         
         VStack(spacing: spacing) {
             HStack {
                 Button(action: {
-                    if setting > 5  {
-                        self.setting -= increment_amount
+                    if settings.cues_per_minute > 1  {
+                        self.settings.cues_per_minute -= increment_amount
                     }
                     
                 }) {
@@ -35,42 +34,41 @@ struct VibrationInterval: View {
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
-                        .frame(width: buttonWidth * 0.8, height: buttonHeight)
+                        .frame(width: buttonWidth, height: buttonHeight)
                         .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
-
+                
                 Spacer()
-
-                Text("every "+"\(setting)"+" seconds")
-                    .font(.caption2)
-                    .multilineTextAlignment(.center)
+                
+                Text("x"+"\(settings.cues_per_minute)")
+                    .font(.largeTitle)
                     .fixedSize(horizontal: false, vertical: true)
-                    .frame(width: 70, height: 60)
+                    .frame(width: indicator, height: indicator)
                     .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
-
+                
                 Spacer()
-
+                
                 Button(action: {
-                    if setting >= 240 {
-                        self.setting = self.setting
+                    if settings.cues_per_minute >= 6 {
+                        self.settings.cues_per_minute = self.settings.cues_per_minute
                     } else {
-                        self.setting += increment_amount
+                        self.settings.cues_per_minute += increment_amount
                     }
                 }) {
                     Text("➕")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
-                        .frame(width: buttonWidth * 0.8, height: buttonHeight)
+                        .frame(width: buttonWidth, height: buttonHeight)
                         .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
             }
-
+            
             Spacer()
-
+            
             HStack {
                 Button(action: {
-                    navigationCoordinator.navigate(to: .cueingLength)
+                    navigationCoordinator.navigate(to: .start)
                 }) {
                     Text("Back")
                         .font(.title3)
@@ -82,9 +80,9 @@ struct VibrationInterval: View {
                 Spacer()
                 
                 Button(action: {
-                    navigationCoordinator.navigate(to: .activeCueing)
+                    navigationCoordinator.navigate(to: .cueingLength)
                 }) {
-                    Text("Start")
+                    Text("Next")
                         .font(.title3)
                         .padding()
                         .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
@@ -97,9 +95,9 @@ struct VibrationInterval: View {
     }
 }
 
-struct VibrationInterval_Preview: PreviewProvider {
+struct CueStyle_Preview: PreviewProvider {
     static var previews: some View {
-        VibrationInterval()
+        CueStyle()
             .environmentObject(NavigationCoordinator())
             .environmentObject(ActiveCueingSettings())
     }
