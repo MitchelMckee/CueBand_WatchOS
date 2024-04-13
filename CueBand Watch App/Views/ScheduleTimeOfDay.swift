@@ -9,29 +9,35 @@ import SwiftUI
 
 struct ScheduleTimeOfDay: View {
     @EnvironmentObject var navigationCoordinator: NavigationCoordinator
+    @EnvironmentObject var schedule_settings: ScheduledCueingSettings
+    
     @State private var setting = 0
-    @State private var times_of_day = ["Morning", "Afternoon", "Evening"]
     @State private var increment_amount = 1
     @State private var radius_amount = CGFloat(60)
     @State private var object_color = Color.black
 
     var body: some View {
+        
+        let screen_bounds = WKInterfaceDevice.current().screenBounds
+        let buttonWidth = screen_bounds.width * 0.3
+        let buttonHeight = screen_bounds.height * 0.2
+        
         VStack(spacing: 20) {
             HStack {
                 Button(action: {
-                    self.setting = (self.setting - 1 + times_of_day.count) % times_of_day.count
+                    self.setting = (self.setting - 1 + schedule_settings.times_of_day.count) % schedule_settings.times_of_day.count
                 }) {
                     Text("➖")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
-                        .frame(width: 50, height: 40)
+                        .frame(width: buttonWidth * 0.8, height: buttonHeight)
                         .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
 
                 Spacer()
 
-                Text(times_of_day[setting])
+                Text(schedule_settings.times_of_day[setting])
                     .font(.caption)
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(width: 70, height: 60)
@@ -40,13 +46,13 @@ struct ScheduleTimeOfDay: View {
                 Spacer()
 
                 Button(action: {
-                    self.setting = (self.setting + 1) % times_of_day.count
+                    self.setting = (self.setting + 1) % schedule_settings.times_of_day.count
                 }) {
                     Text("➕")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
-                        .frame(width: 50, height: 40)
+                        .frame(width: buttonWidth * 0.8, height: buttonHeight)
                         .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
             }
@@ -55,31 +61,41 @@ struct ScheduleTimeOfDay: View {
 
             HStack {
                 Button(action: {
-                    // Action for Back Button
+                    navigationCoordinator.navigate(to: .createEditSchedule)
                 }) {
                     Text("Back")
                         .font(.title3)
                         .padding()
+                        .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
                         .background(Rectangle().fill(object_color).cornerRadius(10))
                 }
 
                 Spacer()
 
                 Button(action: {
-                    // Action for Next Button
+                    schedule_settings.chosen_time_of_day = setting
+                    navigationCoordinator.navigate(to: .timeOfDay)
                 }) {
                     Text("Next")
                         .font(.title3)
                         .padding()
+                        .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
                         .background(Rectangle().fill(object_color).cornerRadius(10))
                 }
             }
+        }
+        .onAppear{
+            setting = schedule_settings.chosen_time_of_day
         }
         .padding()
         .background(Color.white)
     }
 }
 
-#Preview {
-    ScheduleTimeOfDay()
+struct ScheduleTimeOfDay_Preview: PreviewProvider {
+        static var previews: some View {
+            ScheduleTimeOfDay()
+                .environmentObject(NavigationCoordinator())
+                .environmentObject(ScheduledCueingSettings())
+        }
 }

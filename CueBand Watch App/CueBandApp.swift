@@ -11,7 +11,8 @@ import SwiftUI
 struct CueBand_Watch_AppApp: App {
     
     @StateObject var navigationCoordinator = NavigationCoordinator()
-    @StateObject private var activeSettings = ActiveCueingSettings()
+    @StateObject var activeSettings = ActiveCueingSettings()
+    @StateObject var scheduleSettings = ScheduledCueingSettings()
             
     var body: some Scene {
         WindowGroup{
@@ -27,10 +28,12 @@ struct CueBand_Watch_AppApp: App {
                     ScheduleTimeOfDay()
                         .environmentObject(navigationCoordinator)
                         .environmentObject(activeSettings)
+                        .environmentObject(scheduleSettings)
                 case .createEditSchedule:
                     CreateEditSchedule()
                         .environmentObject(navigationCoordinator)
                         .environmentObject(activeSettings)
+                        .environmentObject(scheduleSettings)
                 case .vibrationInterval:
                     VibrationInterval()
                         .environmentObject(navigationCoordinator)
@@ -39,6 +42,7 @@ struct CueBand_Watch_AppApp: App {
                     TimeOfDay()
                         .environmentObject(navigationCoordinator)
                         .environmentObject(activeSettings)
+                        .environmentObject(scheduleSettings)
                 case .cueingLength:
                     CueingLength()
                         .environmentObject(navigationCoordinator)
@@ -47,6 +51,7 @@ struct CueBand_Watch_AppApp: App {
                     ActiveCueing()
                         .environmentObject(navigationCoordinator)
                         .environmentObject(activeSettings)
+                        .environmentObject(scheduleSettings)
                 }
         }
     }

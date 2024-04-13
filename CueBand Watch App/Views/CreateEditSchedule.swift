@@ -14,34 +14,57 @@ struct CreateEditSchedule: View {
         
         let screen_bounds = WKInterfaceDevice.current().screenBounds
         let max_button_width = screen_bounds.width * 0.9
-        let spacing = screen_bounds.width * 0.2
+        let spacing = screen_bounds.width * 0.01
         
         VStack(spacing: spacing) {
-                  Spacer()
-                  Button("Edit Schedule") {
-                      navigationCoordinator.navigate(to: .cuesPerMinute)
-                  }
-                  .multilineTextAlignment(.center)
-                  .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))
-                  .font(.title3)
-                  .bold()
-                  
-                  
-                  Button("Create Schedule") {
-                      navigationCoordinator.navigate(to: .scheduleTimeOfDay)
-                  }
-                  .multilineTextAlignment(.center)
-                  .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))
-                  .font(.title3)
-                  .bold()
-                  
-                  Spacer()
-              }
+        
+            Spacer()
+            
+// Edit Schedule Button ----------------------
+            
+            Button("Edit Schedule") {
+                navigationCoordinator.navigate(to: .cuesPerMinute)
+            }
+            .multilineTextAlignment(.center)
+            .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))
+            .font(.title3)
+            .bold()
+            
+// -------------------------------------------
 
-              .frame(maxWidth: .infinity, maxHeight: .infinity)
-              .edgesIgnoringSafeArea(.all)
-              .background(Color.white)
-          }
+            Spacer()
+            
+// Create Schedule Button --------------------
+            
+            Button("Create Schedule") {
+                navigationCoordinator.navigate(to: .scheduleTimeOfDay)
+            }
+            .multilineTextAlignment(.center)
+            .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))
+            .font(.title3)
+            .bold()
+            
+// -------------------------------------------
+            
+            Spacer()
+
+// Back Button -------------------------------
+            
+            Button("Back") {
+                navigationCoordinator.navigate(to: .start)
+            }
+            .multilineTextAlignment(.center)
+            .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.3, height: 40, radius: 20))
+            .font(.subheadline)
+            .bold()
+     
+ // -------------------------------------------
+
+        }
+        .padding(.bottom) // For smaller screens
+        .frame(maxWidth: .infinity) // To avoid black bars
+        .background(Color.white)
+        }
       }
 
 struct CreateEditSchedule_Preview: PreviewProvider {

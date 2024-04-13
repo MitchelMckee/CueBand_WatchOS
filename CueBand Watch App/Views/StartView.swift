@@ -8,9 +8,14 @@ struct StartView: View {
         
         let screen_bounds = WKInterfaceDevice.current().screenBounds
         let max_button_width = screen_bounds.width * 0.9
+        let spacing = screen_bounds.width * 0.06
         
-              VStack(spacing: 20) {
+              VStack(spacing: spacing) {
+                  
                   Spacer()
+
+// Start button ------------------------------
+                  
                   Button("Start") {
                       navigationCoordinator.navigate(to: .cuesPerMinute)
                   }
@@ -18,7 +23,11 @@ struct StartView: View {
                   .font(.title)
                   .bold()
                   
+// -------------------------------------------
                   
+                  Spacer()
+                  
+// Schedule button ---------------------------
                   Button("Schedule") {
                       navigationCoordinator.navigate(to: .createEditSchedule)
                   }
@@ -26,6 +35,7 @@ struct StartView: View {
                   .font(.title3)
                   .bold()
                   
+// -------------------------------------------
                   Spacer()
               }
               .padding()

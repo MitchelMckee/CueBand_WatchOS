@@ -17,7 +17,13 @@ struct VibrationInterval: View {
     @State private var object_color = Color.black
 
     var body: some View {
-        VStack(spacing: 20) {
+        
+        let screen_bounds = WKInterfaceDevice.current().screenBounds
+        let spacing = screen_bounds.height * 0.1
+        let buttonWidth = screen_bounds.width * 0.3
+        let buttonHeight = screen_bounds.height * 0.2
+        
+        VStack(spacing: spacing) {
             HStack {
                 Button(action: {
                     if setting > 5  {
@@ -29,7 +35,7 @@ struct VibrationInterval: View {
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
-                        .frame(width: 50, height: 40)
+                        .frame(width: buttonWidth * 0.8, height: buttonHeight)
                         .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
 
@@ -55,7 +61,7 @@ struct VibrationInterval: View {
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
-                        .frame(width: 50, height: 40)
+                        .frame(width: buttonWidth * 0.8, height: buttonHeight)
                         .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
             }
@@ -64,23 +70,24 @@ struct VibrationInterval: View {
 
             HStack {
                 Button(action: {
-                    // Action for Back Button
+                    navigationCoordinator.navigate(to: .cueingLength)
                 }) {
                     Text("Back")
                         .font(.title3)
                         .padding()
+                        .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
                         .background(Rectangle().fill(object_color).cornerRadius(10))
                 }
-
+                
                 Spacer()
-
+                
                 Button(action: {
-                    // Action for Next Button
                     navigationCoordinator.navigate(to: .activeCueing)
                 }) {
                     Text("Start")
                         .font(.title3)
                         .padding()
+                        .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
                         .background(Rectangle().fill(object_color).cornerRadius(10))
                 }
             }
@@ -90,6 +97,10 @@ struct VibrationInterval: View {
     }
 }
 
-#Preview {
-    VibrationInterval()
+struct VibrationInterval_Preview: PreviewProvider {
+    static var previews: some View {
+        VibrationInterval()
+            .environmentObject(NavigationCoordinator())
+            .environmentObject(ActiveCueingSettings())
+    }
 }
