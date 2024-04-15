@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CueingLength: View {
+struct CueLength: View {
     @EnvironmentObject var navigationCoordinator: NavigationCoordinator
     @EnvironmentObject var settings: ActiveCueingSettings
     @State private var increment_amount = 10
@@ -108,7 +108,7 @@ struct CueingLength: View {
 
 struct CueingLength_Preview: PreviewProvider {
     static var previews: some View {
-        CueingLength()
+        CueLength()
             .environmentObject(NavigationCoordinator())
             .environmentObject(ActiveCueingSettings())
     }

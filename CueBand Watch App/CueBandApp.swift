@@ -44,7 +44,7 @@ struct CueBand_Watch_AppApp: App {
                         .environmentObject(activeSettings)
                         .environmentObject(scheduleSettings)
                 case .cueingLength:
-                    CueingLength()
+                    CueLength()
                         .environmentObject(navigationCoordinator)
                         .environmentObject(activeSettings)
                 case .activeCueing:
