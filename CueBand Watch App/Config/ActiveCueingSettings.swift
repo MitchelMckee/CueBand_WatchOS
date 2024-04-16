@@ -14,7 +14,7 @@ class ActiveCueingSettings: ObservableObject {
             time_remaining = cueing_length * 60 // Change to mins
         }
     }
-    @Published var cues_per_minute: Int = 1
+    @Published var cues_per_minute: Int = 5
     @Published var cue_style: Int = 1
     @Published var time_remaining: Int = 3600 // Default to an hour
     
