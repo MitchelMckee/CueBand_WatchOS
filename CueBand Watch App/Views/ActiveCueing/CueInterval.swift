@@ -11,8 +11,7 @@ struct CueInterval: View {
     @EnvironmentObject var navigationCoordinator: NavigationCoordinator
     @EnvironmentObject var settings: ActiveCueingSettings
     
-    @State private var setting = 5
-    @State private var increment_amount = 30
+    @State private var increment_amount = 5
     @State private var radius_amount = CGFloat(60)
     @State private var object_color = Color.black
 
@@ -26,8 +25,8 @@ struct CueInterval: View {
         VStack(spacing: spacing) {
             HStack {
                 Button(action: {
-                    if setting > 5  {
-                        self.setting -= increment_amount
+                    if settings.cues_per_minute > 5  {
+                        settings.cues_per_minute -= increment_amount
                     }
                     
                 }) {
@@ -41,7 +40,7 @@ struct CueInterval: View {
 
                 Spacer()
 
-                Text("every "+"\(setting)"+" seconds")
+                Text("every "+"\(settings.cues_per_minute)"+" seconds")
                     .font(.caption2)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
@@ -51,10 +50,10 @@ struct CueInterval: View {
                 Spacer()
 
                 Button(action: {
-                    if setting >= 240 {
-                        self.setting = self.setting
+                    if settings.cues_per_minute >= 60 {
+                        settings.cues_per_minute = settings.cues_per_minute
                     } else {
-                        self.setting += increment_amount
+                        settings.cues_per_minute += increment_amount
                     }
                 }) {
                     Text("➕")
