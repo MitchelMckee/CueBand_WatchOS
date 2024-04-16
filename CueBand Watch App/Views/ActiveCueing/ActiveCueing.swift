@@ -15,20 +15,20 @@ struct ActiveCueing: View {
    
     @State private var timer_is_active = false
     @State private var radius_amount = CGFloat(10)
-    @State private var cueing_style = 3
-    @State private var cueing_rate = 1
+ 
     @State private var time_since_last_cue = 0
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        
+                
         let screen_bounds = WKInterfaceDevice.current().screenBounds
         let spacing = screen_bounds.width * 0.1
         
         VStack(spacing: 10) {
            
-// Timer
+// Timer -------------------------------------
+
             Text(formatTime(time: settings.time_remaining))
                 .font(.title)
                 .fontWeight(.semibold)
@@ -46,16 +46,20 @@ struct ActiveCueing: View {
                         settings.time_remaining -= 1
                         time_since_last_cue += 1
                         
-                        if time_since_last_cue >= cueing_rate {
+                        if time_since_last_cue >= settings.cues_per_minute {
                             time_since_last_cue = 0
-                            triggerVibrations(repeatCount: cueing_style)
+                            triggerVibrations(repeatCount: settings.cue_style)
                         }
                     }
                     
                 }
+            
+// -------------------------------------------
+            
             HStack(spacing: spacing) {
                 
-// Stop Button
+// Stop Button -------------------------------
+
                 Button(action: {
                     self.timer_is_active = false
                     settings.stopCueing()
@@ -66,10 +70,12 @@ struct ActiveCueing: View {
                         .font(.title2)
                 }
                 .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: 60, height: 60, radius: 10))
+                
+// -------------------------------------------
 
-// Settings Button
+// Settings Button ----------------------------
                 Button(action: {
-                    self.timer_is_active = true
+                    navigationCoordinator.navigate(to: .cuesPerMinute)
                 }) {
                     Text("⚙️")
                         .font(.title2)
@@ -77,7 +83,10 @@ struct ActiveCueing: View {
                 }
                 .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: 60, height: 60, radius: 10))
             }
-            .frame(maxWidth: screen_bounds.width * 0.5, maxHeight: .infinity)
+            
+// -------------------------------------------
+            
+        .frame(maxWidth: screen_bounds.width * 0.5, maxHeight: .infinity)
             
         }
         .onAppear{
@@ -90,7 +99,7 @@ struct ActiveCueing: View {
     
     }
     
-// Format time from seconds to HH:mm:ss
+// Format time from seconds to hh:mm:ss
 private func formatTime(time: Int) -> String {
     let hours = time / 3600
     let minutes = (time % 3600) / 60
@@ -99,7 +108,7 @@ private func formatTime(time: Int) -> String {
     }
     
     private func triggerVibrations(repeatCount: Int){
-        let interval = 0.3
+        let interval = 0.2 // Small interval to stop vibrations stacking
         for i in 0..<repeatCount {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) * interval) {
                 WKInterfaceDevice.current().play(.click)
@@ -108,7 +117,7 @@ private func formatTime(time: Int) -> String {
     }
 }
 
-struct ActiveCueingScreen_Previews: PreviewProvider {
+struct ActiveCueing_Previews: PreviewProvider {
     static var previews: some View {
         ActiveCueing()
             .environmentObject(NavigationCoordinator())

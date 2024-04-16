@@ -25,8 +25,8 @@ struct CueStyle: View {
         VStack(spacing: spacing) {
             HStack {
                 Button(action: {
-                    if settings.cues_per_minute > 1  {
-                        self.settings.cues_per_minute -= increment_amount
+                    if settings.cue_style > 1  {
+                        self.settings.cue_style -= increment_amount
                     }
                     
                 }) {
@@ -40,7 +40,7 @@ struct CueStyle: View {
                 
                 Spacer()
                 
-                Text("x"+"\(settings.cues_per_minute)")
+                Text("x"+"\(settings.cue_style)")
                     .font(.largeTitle)
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(width: indicator, height: indicator)
@@ -49,10 +49,10 @@ struct CueStyle: View {
                 Spacer()
                 
                 Button(action: {
-                    if settings.cues_per_minute >= 6 {
-                        self.settings.cues_per_minute = self.settings.cues_per_minute
+                    if settings.cue_style >= 6 {
+                        self.settings.cue_style = self.settings.cue_style
                     } else {
-                        self.settings.cues_per_minute += increment_amount
+                        self.settings.cue_style += increment_amount
                     }
                 }) {
                     Text("➕")

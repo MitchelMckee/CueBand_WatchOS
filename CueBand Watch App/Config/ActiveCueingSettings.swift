@@ -8,28 +8,35 @@
 import Foundation
 
 class ActiveCueingSettings: ObservableObject {
-    @Published var cueing_length: Int = 10 // Changed by user input
-    @Published var time_remaining: Int = 3600 // Changed by timer
+    
+    @Published var cueing_length: Int = 10 {
+        didSet {
+            time_remaining = cueing_length * 60 // Change to mins
+        }
+    }
+    @Published var cues_per_minute: Int = 1
+    @Published var cue_style: Int = 1
+    @Published var time_remaining: Int = 3600 // Default to an hour
     
     private var timer: Timer?
     
-    @Published var cueing_interval: Int = 0
-    @Published var cues_per_minute: Int = 1
-    
     func startCueing() {
-         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-             guard let self = self else { return }
-             if self.time_remaining > 0 {
-                 self.time_remaining -= 1
-             } else {
-                 self.stopCueing()
-             }
-         }
-     }
+        time_remaining = cueing_length * 60
+        if timer == nil {
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+                guard let self = self else { return }
+                if time_remaining > 0 {
+                    time_remaining -= 1
+                } else {
+                    stopCueing()
+                }
+            }
+        }
+    }
     
     func stopCueing() {
-           self.timer?.invalidate()
-           self.timer = nil
+           timer?.invalidate()
+           timer = nil
        }
 }
 
