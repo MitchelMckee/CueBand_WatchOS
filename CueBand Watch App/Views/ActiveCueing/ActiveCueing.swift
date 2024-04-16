@@ -12,7 +12,6 @@ struct ActiveCueing: View {
     @EnvironmentObject var navigationCoordinator: NavigationCoordinator
     @EnvironmentObject var settings: ActiveCueingSettings
     
-   
     @State private var timer_is_active = false
     @State private var radius_amount = CGFloat(10)
  
@@ -21,7 +20,7 @@ struct ActiveCueing: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-                
+       
         let screen_bounds = WKInterfaceDevice.current().screenBounds
         let spacing = screen_bounds.width * 0.1
         
@@ -107,8 +106,8 @@ private func formatTime(time: Int) -> String {
     return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
     
-    private func triggerVibrations(repeatCount: Int){
-        let interval = 0.2 // Small interval to stop vibrations stacking
+private func triggerVibrations(repeatCount: Int){
+    let interval = 0.5 // Small interval to stop vibrations stacking
         for i in 0..<repeatCount {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) * interval) {
                 WKInterfaceDevice.current().play(.click)
