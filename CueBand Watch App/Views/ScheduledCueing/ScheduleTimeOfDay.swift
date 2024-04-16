@@ -15,7 +15,7 @@ struct ScheduleTimeOfDay: View {
     @State private var increment_amount = 1
     @State private var radius_amount = CGFloat(60)
     @State private var object_color = Color.black
-
+    
     var body: some View {
         
         let screen_bounds = WKInterfaceDevice.current().screenBounds
