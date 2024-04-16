@@ -13,6 +13,12 @@ struct DaysOfWeek: View {
     }
 }
 
-#Preview {
-    DaysOfWeek()
+struct DaysOfWeek_Preview: PreviewProvider {
+        static var previews: some View {
+            DaysOfWeek()
+                .environmentObject(NavigationCoordinator())
+                .environmentObject(ActiveCueingSettings())
+                .environmentObject(ScheduledCueingSettings())
+        }
 }
+
