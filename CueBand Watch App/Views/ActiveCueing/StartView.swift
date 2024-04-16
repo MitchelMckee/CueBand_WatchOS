@@ -47,6 +47,8 @@ struct StartView: View {
 
 struct StartView_Previews: PreviewProvider {
     static var previews: some View {
-        StartView().environmentObject(NavigationCoordinator())
+        StartView()
+            .environmentObject(NavigationCoordinator())
+            .environmentObject(ActiveCueingSettings())
     }
 }
