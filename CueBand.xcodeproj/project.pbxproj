@@ -71,6 +71,7 @@
 		CB4FF9E72BAB808700A06D1C /* CueLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueLength.swift; sourceTree = "<group>"; };
 		CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEditSchedule.swift; sourceTree = "<group>"; };
 		CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDay.swift; sourceTree = "<group>"; };
+		CB64D4A52BCEC47C00A7ABF9 /* CueBand-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CueBand-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CB88413D2B8CE67900CFA352 /* CueStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueStyle.swift; sourceTree = "<group>"; };
 		CBB3BD0E2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledCueingSettings.swift; sourceTree = "<group>"; };
 		CBB3BD112BCB0EBB00CA1DE1 /* DaysOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfWeek.swift; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 		CB1811C92B7929BC00AAC6D5 /* CueBand Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				CB64D4A52BCEC47C00A7ABF9 /* CueBand-Watch-App-Info.plist */,
 				CB2D6A802BC304FA00B62E61 /* CueBand Watch App.entitlements */,
 				CB1811CA2B7929BC00AAC6D5 /* CueBandApp.swift */,
 				CB1811CE2B7929BD00AAC6D5 /* Assets.xcassets */,
@@ -580,12 +582,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "CueBand Watch App/CueBand Watch App.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CueBand Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = LRC8XQ56Q4;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CueBand-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CueBand;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
@@ -596,6 +599,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CueBand.CueBand.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = NO;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
@@ -614,12 +618,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "CueBand Watch App/CueBand Watch App.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CueBand Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = LRC8XQ56Q4;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CueBand-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CueBand;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
@@ -630,6 +635,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CueBand.CueBand.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = NO;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
