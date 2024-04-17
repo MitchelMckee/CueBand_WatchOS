@@ -19,15 +19,23 @@ struct TimeOfDay: View {
     @State private var editing_hour = true
     @State private var max_hours = 23
     @State private var max_mins = 58
-    
+
     var body: some View {
         
         let screen_bounds = WKInterfaceDevice.current().screenBounds
-        let spacing = screen_bounds.height * 0.1
+        let spacing = screen_bounds.height * 0.02
         let buttonWidth = screen_bounds.width * 0.3
         let buttonHeight = screen_bounds.height * 0.2
         
+        
         VStack(spacing: spacing) {
+        
+            Text("\(String(format: "%02d:%02d", schedule_settings.scheduled_hour, schedule_settings.scheduled_min))")
+                            .font(.title3)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .frame(width: 100, height: 30)
+                            .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
+
             HStack {
                 Button(action: {
                     if editing_hour {
@@ -53,20 +61,12 @@ struct TimeOfDay: View {
                 
                 Spacer()
                 
-                Group {
-                    Text("\(String(format: "%02d", schedule_settings.scheduled_hour))")
-                        .foregroundColor(editing_hour ? Color.red : Color.white)
-                    + Text(":")
-                        .foregroundColor(Color.white)
-                    + Text("\(String(format: "%02d", schedule_settings.scheduled_min))")
-                        .foregroundColor(editing_hour ? Color.white : Color.red)
-                }
-                    .font(.caption2)
-                    .multilineTextAlignment(.center)
+                Text(editing_hour ? String(format: "%02dh", schedule_settings.scheduled_hour) : String(format: "%02dm", schedule_settings.scheduled_min))
+                    .font(.title2)
                     .fixedSize(horizontal: false, vertical: true)
-                    .frame(width: 70, height: 60)
+                    .frame(width: 75, height: 60)
                     .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
-                
+                                        
                 Spacer()
                 
                 Button(action: {
