@@ -61,7 +61,7 @@ struct TimeOfDay: View {
                 
                 Spacer()
                 
-                Text(editing_hour ? String(format: "%02dh", schedule_settings.scheduled_hour) : String(format: "%02dm", schedule_settings.scheduled_min))
+                Text(editing_hour ? String(format: "%02d", schedule_settings.scheduled_hour) : String(format: "%02d", schedule_settings.scheduled_min))
                     .font(.title2)
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(width: 75, height: 60)

@@ -18,11 +18,11 @@
 		CB1811E82B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811E72B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift */; };
 		CB2D6A792BC0813B00B62E61 /* ActiveCueingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2D6A782BC0813B00B62E61 /* ActiveCueingSettings.swift */; };
 		CB2D6A7B2BC1B04C00B62E61 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2D6A7A2BC1B04C00B62E61 /* CustomButtonStyle.swift */; };
-		CB2D6A822BC3069800B62E61 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2D6A812BC3069800B62E61 /* WorkoutManager.swift */; };
 		CB4FF9E62BAB7AEB00A06D1C /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9E52BAB7AEB00A06D1C /* StartView.swift */; };
 		CB4FF9E82BAB808700A06D1C /* CueLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9E72BAB808700A06D1C /* CueLength.swift */; };
 		CB4FF9EC2BAB828900A06D1C /* CreateEditSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */; };
 		CB4FF9EE2BAB829C00A06D1C /* TimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */; };
+		CB64D4A72BCF124600A7ABF9 /* HealthKitSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB64D4A62BCF124600A7ABF9 /* HealthKitSetup.swift */; };
 		CB88413E2B8CE67900CFA352 /* CueStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88413D2B8CE67900CFA352 /* CueStyle.swift */; };
 		CBB3BD0F2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB3BD0E2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift */; };
 		CBB3BD122BCB0EBB00CA1DE1 /* DaysOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB3BD112BCB0EBB00CA1DE1 /* DaysOfWeek.swift */; };
@@ -66,12 +66,12 @@
 		CB2D6A782BC0813B00B62E61 /* ActiveCueingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCueingSettings.swift; sourceTree = "<group>"; };
 		CB2D6A7A2BC1B04C00B62E61 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		CB2D6A802BC304FA00B62E61 /* CueBand Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CueBand Watch App.entitlements"; sourceTree = "<group>"; };
-		CB2D6A812BC3069800B62E61 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		CB4FF9E52BAB7AEB00A06D1C /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		CB4FF9E72BAB808700A06D1C /* CueLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueLength.swift; sourceTree = "<group>"; };
 		CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEditSchedule.swift; sourceTree = "<group>"; };
 		CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDay.swift; sourceTree = "<group>"; };
 		CB64D4A52BCEC47C00A7ABF9 /* CueBand-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CueBand-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CB64D4A62BCF124600A7ABF9 /* HealthKitSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetup.swift; sourceTree = "<group>"; };
 		CB88413D2B8CE67900CFA352 /* CueStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueStyle.swift; sourceTree = "<group>"; };
 		CBB3BD0E2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledCueingSettings.swift; sourceTree = "<group>"; };
 		CBB3BD112BCB0EBB00CA1DE1 /* DaysOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfWeek.swift; sourceTree = "<group>"; };
@@ -182,8 +182,8 @@
 				CBD86F462BBE244E00FAAA62 /* NavigationCoordinator.swift */,
 				CB2D6A7A2BC1B04C00B62E61 /* CustomButtonStyle.swift */,
 				CB2D6A782BC0813B00B62E61 /* ActiveCueingSettings.swift */,
-				CB2D6A812BC3069800B62E61 /* WorkoutManager.swift */,
 				CBB3BD0E2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift */,
+				CB64D4A62BCF124600A7ABF9 /* HealthKitSetup.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -412,7 +412,7 @@
 				CBD86F472BBE244E00FAAA62 /* NavigationCoordinator.swift in Sources */,
 				CB2D6A792BC0813B00B62E61 /* ActiveCueingSettings.swift in Sources */,
 				CBB3BD0F2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift in Sources */,
-				CB2D6A822BC3069800B62E61 /* WorkoutManager.swift in Sources */,
+				CB64D4A72BCF124600A7ABF9 /* HealthKitSetup.swift in Sources */,
 				CB1811CB2B7929BC00AAC6D5 /* CueBandApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,14 +582,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "CueBand Watch App/CueBand Watch App.entitlements";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CueBand Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LRC8XQ56Q4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CueBand-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CueBand;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Please allow access this allows the vibrations to happen in the background, your data will not be used for any other reason.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow access this allows the vibrations to happen in the background, your data will not be used for any other reason.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Please allow access this allows the vibrations to happen in the background, your data will not be used for any other reason.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -618,14 +622,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "CueBand Watch App/CueBand Watch App.entitlements";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CueBand Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LRC8XQ56Q4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CueBand-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CueBand;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Please allow access this allows the vibrations to happen in the background, your data will not be used for any other reason.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow access this allows the vibrations to happen in the background, your data will not be used for any other reason.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Please allow access this allows the vibrations to happen in the background, your data will not be used for any other reason.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (

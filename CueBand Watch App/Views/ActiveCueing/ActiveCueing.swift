@@ -11,6 +11,7 @@ import WatchKit
 struct ActiveCueing: View {
     @EnvironmentObject var navigationCoordinator: NavigationCoordinator
     @EnvironmentObject var settings: ActiveCueingSettings
+    @EnvironmentObject var healthKitManager: HealthKitManager
     
     @State private var timer_is_active = false
     @State private var radius_amount = CGFloat(10)
@@ -91,6 +92,7 @@ struct ActiveCueing: View {
         .onAppear{
             self.timer_is_active = true
             settings.startCueing()
+            healthKitManager.startWorkout()
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -121,5 +123,6 @@ struct ActiveCueing_Previews: PreviewProvider {
         ActiveCueing()
             .environmentObject(NavigationCoordinator())
             .environmentObject(ActiveCueingSettings())
+            .environmentObject(HealthKitManager())
     }
 }

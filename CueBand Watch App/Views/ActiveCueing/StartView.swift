@@ -2,7 +2,6 @@ import SwiftUI
 
 struct StartView: View {
     @EnvironmentObject var navigationCoordinator: NavigationCoordinator
-   
     
     var body: some View {
         
