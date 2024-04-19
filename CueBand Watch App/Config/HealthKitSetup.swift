@@ -45,6 +45,24 @@ class HealthKitManager: NSObject, ObservableObject, HKWorkoutSessionDelegate, HK
         }
     }
     
+    func endWorkout(){
+        session?.end()
+  
+        builder?.endCollection(withEnd: Date()) { (success, error) in
+            if let error = error {
+                print("Failed to end workout: \(error.localizedDescription)")
+                return
+                }
+            }
+        builder?.finishWorkout { workout, error in
+            if let workout = workout {
+                print("Workout finished: \(workout)")
+            } else if let error = error {
+                print("Error finishing workout: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     func requestAuthorisation(completion: @escaping (Bool, Error?) -> Void){
         let typeToShare: Set = [HKQuantityType.workoutType()]
         let typeToRead: Set = [HKQuantityType.quantityType(forIdentifier: .walkingSpeed)!]

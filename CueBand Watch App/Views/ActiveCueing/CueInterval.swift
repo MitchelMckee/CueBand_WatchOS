@@ -25,8 +25,8 @@ struct CueInterval: View {
         VStack(spacing: spacing) {
             HStack {
                 Button(action: {
-                    if settings.cues_per_minute > 5  {
-                        settings.cues_per_minute -= increment_amount
+                    if settings.cue_interval > 5  {
+                        settings.cue_interval -= increment_amount
                     }
                     
                 }) {
@@ -40,7 +40,7 @@ struct CueInterval: View {
 
                 Spacer()
 
-                Text("every "+"\(settings.cues_per_minute)"+" seconds")
+                Text("every "+"\(settings.cue_interval)"+" seconds")
                     .font(.caption2)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
@@ -50,10 +50,10 @@ struct CueInterval: View {
                 Spacer()
 
                 Button(action: {
-                    if settings.cues_per_minute >= 60 {
-                        settings.cues_per_minute = settings.cues_per_minute
+                    if settings.cue_interval >= 60 {
+                        settings.cue_interval = settings.cue_interval
                     } else {
-                        settings.cues_per_minute += increment_amount
+                        settings.cue_interval += increment_amount
                     }
                 }) {
                     Text("➕")

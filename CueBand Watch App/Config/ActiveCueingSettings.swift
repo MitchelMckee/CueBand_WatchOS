@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import WatchKit
 
 class ActiveCueingSettings: ObservableObject {
     
@@ -14,31 +15,54 @@ class ActiveCueingSettings: ObservableObject {
             time_remaining = cueing_length * 60 // Change to mins
         }
     }
-    @Published var cues_per_minute: Int = 5
+    @Published var cue_interval: Int = 5
     @Published var cue_style: Int = 1
     @Published var time_remaining: Int = 3600 // Default to an hour
     
     private var timer: Timer?
+    private var time_since_last_cue = 0
     
     func startCueing() {
-        time_remaining = cueing_length * 60
+        print("Cues Per Min: ", cue_interval)
+        print("Cue Style: ", cue_style)
+        
         if timer == nil {
+            time_remaining = cueing_length * 60
             timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-                guard let self = self else { return }
-                if time_remaining > 0 {
-                    time_remaining -= 1
-                } else {
-                    stopCueing()
-                }
+                self?.timerTick()
             }
         }
     }
-    
+        
     func stopCueing() {
-           timer?.invalidate()
-           timer = nil
-       }
+            timer?.invalidate()
+            timer = nil
+        }
+        
+    private func timerTick(){
+        if time_remaining > 0 {
+            time_remaining -= 1
+            time_since_last_cue += 1
+            
+            if time_since_last_cue >= cue_interval {
+                time_since_last_cue = 0
+                triggerVibrations(repeatCount: cue_style)
+            }
+            
+        } else {
+            stopCueing()
+        }
+    }
+    
+    func triggerVibrations(repeatCount: Int){
+        print("Triggering Vibrations")
+        let vibInterval = 0.4 // Small interval to stop vibrations stacking
+            for i in 0..<repeatCount {
+                DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) * vibInterval) {
+                    WKInterfaceDevice.current().play(.notification)
+                }
+            }
+        }
 }
-
 
 
