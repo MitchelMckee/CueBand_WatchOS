@@ -12,9 +12,10 @@ struct TimeOfDay: View {
     @EnvironmentObject var settings: ActiveCueingSettings
     @EnvironmentObject var schedule_settings: ScheduledCueingSettings
     
-    @State private var setting = 5
+//    @State private var setting = 5
     @State private var radius_amount = CGFloat(60)
     @State private var object_color = Color.black
+
     
     @State private var editing_hour = true
     @State private var max_hours = 23
@@ -22,6 +23,9 @@ struct TimeOfDay: View {
 
     var body: some View {
         
+        
+        private var selected_day = schedule_settings
+                
         let screen_bounds = WKInterfaceDevice.current().screenBounds
         let spacing = screen_bounds.height * 0.02
         let buttonWidth = screen_bounds.width * 0.3
@@ -115,13 +119,9 @@ struct TimeOfDay: View {
                 Spacer()
                 
                 Button(action: {
-                    if editing_hour{
-                        editing_hour = false
-                    } else {
-                        navigationCoordinator.navigate(to: .activeCueing)
-                    }
+                    saveTime()
                 }) {
-                    Text("Next")
+                    Text("Save")
                         .font(.title3)
                         .padding()
                         .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
@@ -131,6 +131,10 @@ struct TimeOfDay: View {
         }
         .padding()
         .background(Color.white)
+    }
+    
+    private func saveTime(){
+        schedule_settings.addCueingTime(for: selected_day, hour: schedule_settings.scheduled_hour, min: schedule_settings.scheduled_min)
     }
 }
 

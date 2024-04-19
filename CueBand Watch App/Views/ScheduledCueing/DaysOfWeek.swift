@@ -8,8 +8,82 @@
 import SwiftUI
 
 struct DaysOfWeek: View {
+    @EnvironmentObject var navigationCoordinator: NavigationCoordinator
+    @EnvironmentObject var schedule_settings: ScheduledCueingSettings
+    
+    @State private var setting = 0
+    
+    @State private var radius_amount = CGFloat(60)
+    @State private var object_color = Color.black
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        let screen_bounds = WKInterfaceDevice.current().screenBounds
+        let buttonWidth = screen_bounds.width * 0.3
+        let buttonHeight = screen_bounds.height * 0.2
+        
+        VStack(spacing: 20){
+            HStack{
+                
+                Button(action: {
+                    self.setting = (self.setting - 1 + schedule_settings.times_of_day.count) % schedule_settings.times_of_day.count
+                }) {
+                    Text("⬅️")
+                        .font(.title2)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .multilineTextAlignment(.center)
+                        .frame(width: buttonWidth * 0.8, height: buttonHeight)
+                        .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
+                }
+                
+                Text(schedule_settings.days_of_week[setting])
+                    .font(.caption)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(width: 70, height: 60)
+                    .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
+                
+                Button(action: {
+                    self.setting = (self.setting + 1) % schedule_settings.days_of_week.count
+                }) {
+                    Text("➡️")
+                        .font(.title2)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .multilineTextAlignment(.center)
+                        .frame(width: buttonWidth * 0.8, height: buttonHeight)
+                        .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
+                }
+                
+                Spacer()
+                
+            }
+            
+            HStack {
+                Button(action: {
+                    navigationCoordinator.navigate(to: .createEditSchedule)
+                }) {
+                    Text("Back")
+                        .font(.title3)
+                        .padding()
+                        .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
+                        .background(Rectangle().fill(object_color).cornerRadius(10))
+                }
+                
+                Spacer()
+                
+                Button(action: {
+                    schedule_settings.chosen_day = setting
+                    navigationCoordinator.navigate(to: .timeOfDay)
+                }) {
+                    Text("Edit")
+                        .font(.title3)
+                        .padding()
+                        .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
+                        .background(Rectangle().fill(object_color).cornerRadius(10))
+                }
+            }
+        }
+        .padding()
+        .background(Color.white)
     }
 }
 
