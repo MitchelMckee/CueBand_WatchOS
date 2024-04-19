@@ -30,6 +30,7 @@
 		CBB69B472BB9B4B500FCD7FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB69B462BB9B4B500FCD7FE /* ContentView.swift */; };
 		CBB69B492BB9B4B600FCD7FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB69B482BB9B4B600FCD7FE /* Assets.xcassets */; };
 		CBB69B4C2BB9B4B600FCD7FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB69B4B2BB9B4B600FCD7FE /* Preview Assets.xcassets */; };
+		CBBB1A772BD2B8AF00A68A75 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB1A762BD2B8AF00A68A75 /* NotificationManager.swift */; };
 		CBD86F472BBE244E00FAAA62 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD86F462BBE244E00FAAA62 /* NavigationCoordinator.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		CBB69B462BB9B4B500FCD7FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CBB69B482BB9B4B600FCD7FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB69B4B2BB9B4B600FCD7FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CBBB1A762BD2B8AF00A68A75 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CBD86F462BBE244E00FAAA62 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +185,7 @@
 				CB2D6A7A2BC1B04C00B62E61 /* CustomButtonStyle.swift */,
 				CB2D6A782BC0813B00B62E61 /* ActiveCueingSettings.swift */,
 				CBB3BD0E2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift */,
+				CBBB1A762BD2B8AF00A68A75 /* NotificationManager.swift */,
 				CB64D4A62BCF124600A7ABF9 /* HealthKitSetup.swift */,
 			);
 			path = Config;
@@ -405,6 +408,7 @@
 				CB4FF9EE2BAB829C00A06D1C /* TimeOfDay.swift in Sources */,
 				CB4FF9E62BAB7AEB00A06D1C /* StartView.swift in Sources */,
 				CB4FF9E82BAB808700A06D1C /* CueLength.swift in Sources */,
+				CBBB1A772BD2B8AF00A68A75 /* NotificationManager.swift in Sources */,
 				CB2D6A7B2BC1B04C00B62E61 /* CustomButtonStyle.swift in Sources */,
 				CBB3BD122BCB0EBB00CA1DE1 /* DaysOfWeek.swift in Sources */,
 				CB08ADD62BB6E58A007FD97A /* CueInterval.swift in Sources */,

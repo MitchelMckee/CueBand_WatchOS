@@ -44,6 +44,7 @@ struct CueBand_Watch_AppApp: App {
             .environmentObject(scheduleSettings)
             .environmentObject(healthKitManager)
             .onAppear(perform: requestHealthKitAuthorisation)
+            .onAppear(perform: requestNotificationPermission)
         }
     }
     

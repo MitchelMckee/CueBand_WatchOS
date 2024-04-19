@@ -14,12 +14,7 @@ struct ActiveCueing: View {
     @EnvironmentObject var settings: ActiveCueingSettings
     @EnvironmentObject var healthKitManager: HealthKitManager
     
-    @State private var timer_is_active = false
     @State private var radius_amount = CGFloat(10)
-    
-//    @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
-    @State private var time_since_last_cue = 0
     
     var body: some View {
         
@@ -27,22 +22,33 @@ struct ActiveCueing: View {
         let spacing = screen_bounds.width * 0.1
         
         VStack(spacing: 10) {
-                        
-            Text(formatTime(time: settings.time_remaining))
-                .font(.title)
-                .fontWeight(.semibold)
-                .foregroundColor(Color.white)
-                .padding()
-                .background(Color.black)
-                .cornerRadius(radius_amount)
-                .frame(width: screen_bounds.width * 0.95, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/)
-                .lineLimit(0)
-                .shadow(radius: 10)
-            
+            if settings.finished_cueing{
+                Text("Cueing session completed!")
+                    .font(.caption2)
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color.white)
+                    .padding()
+                    .background(Color.black)
+                    .cornerRadius(radius_amount)
+                    .frame(width: screen_bounds.width * 0.95, height: 100)
+                    .shadow(radius: 10)
+            } else {
+                Text(formatTime(time: settings.time_remaining))
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color.white)
+                    .padding()
+                    .background(Color.black)
+                    .cornerRadius(radius_amount)
+                    .frame(width: screen_bounds.width * 0.95, height: 100)
+                    .lineLimit(0)
+                    .shadow(radius: 10)
+                
+                }
             HStack(spacing: spacing) {
                                 
                 Button(action: {
-                    self.timer_is_active = false
                     settings.stopCueing()
                     healthKitManager.endWorkout()
                     navigationCoordinator.navigate(to: .start)
@@ -66,9 +72,6 @@ struct ActiveCueing: View {
             print("View appeared - timer started")
             healthKitManager.startWorkout()
             settings.startCueing()
-        }
-        .onDisappear{
-            print("View disappeared - timer not stopped")
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -18,11 +18,13 @@ class ActiveCueingSettings: ObservableObject {
     @Published var cue_interval: Int = 5
     @Published var cue_style: Int = 1
     @Published var time_remaining: Int = 3600 // Default to an hour
+    @Published var finished_cueing = false
     
     private var timer: Timer?
     private var time_since_last_cue = 0
     
     func startCueing() {
+        finished_cueing = false
         print("Cues Per Min: ", cue_interval)
         print("Cue Style: ", cue_style)
         
@@ -41,7 +43,7 @@ class ActiveCueingSettings: ObservableObject {
         
     private func timerTick(){
         if time_remaining > 0 {
-            time_remaining -= 1
+            time_remaining -= 1000
             time_since_last_cue += 1
             
             if time_since_last_cue >= cue_interval {
@@ -50,6 +52,8 @@ class ActiveCueingSettings: ObservableObject {
             }
             
         } else {
+            scheduleCompletionNotification()
+            finished_cueing = true
             stopCueing()
         }
     }
