@@ -31,6 +31,7 @@
 		CBB69B492BB9B4B600FCD7FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB69B482BB9B4B600FCD7FE /* Assets.xcassets */; };
 		CBB69B4C2BB9B4B600FCD7FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB69B4B2BB9B4B600FCD7FE /* Preview Assets.xcassets */; };
 		CBBB1A772BD2B8AF00A68A75 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB1A762BD2B8AF00A68A75 /* NotificationManager.swift */; };
+		CBBB1A792BD4292C00A68A75 /* EditScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB1A782BD4292C00A68A75 /* EditScheduleView.swift */; };
 		CBD86F472BBE244E00FAAA62 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD86F462BBE244E00FAAA62 /* NavigationCoordinator.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		CBB69B482BB9B4B600FCD7FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB69B4B2BB9B4B600FCD7FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CBBB1A762BD2B8AF00A68A75 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		CBBB1A782BD4292C00A68A75 /* EditScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScheduleView.swift; sourceTree = "<group>"; };
 		CBD86F462BBE244E00FAAA62 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				CB08ADD72BB6E744007FD97A /* ScheduleTimeOfDay.swift */,
+				CBBB1A782BD4292C00A68A75 /* EditScheduleView.swift */,
 				CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */,
 				CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */,
 				CBB3BD112BCB0EBB00CA1DE1 /* DaysOfWeek.swift */,
@@ -406,6 +409,7 @@
 				CB08ADD82BB6E744007FD97A /* ScheduleTimeOfDay.swift in Sources */,
 				CB4FF9EC2BAB828900A06D1C /* CreateEditSchedule.swift in Sources */,
 				CB4FF9EE2BAB829C00A06D1C /* TimeOfDay.swift in Sources */,
+				CBBB1A792BD4292C00A68A75 /* EditScheduleView.swift in Sources */,
 				CB4FF9E62BAB7AEB00A06D1C /* StartView.swift in Sources */,
 				CB4FF9E82BAB808700A06D1C /* CueLength.swift in Sources */,
 				CBBB1A772BD2B8AF00A68A75 /* NotificationManager.swift in Sources */,

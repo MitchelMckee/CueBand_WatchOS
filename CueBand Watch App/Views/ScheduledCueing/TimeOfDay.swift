@@ -23,16 +23,21 @@ struct TimeOfDay: View {
 
     var body: some View {
         
-        
-        private var selected_day = schedule_settings
-                
         let screen_bounds = WKInterfaceDevice.current().screenBounds
-        let spacing = screen_bounds.height * 0.02
+        let spacing = screen_bounds.height * 0.01
         let buttonWidth = screen_bounds.width * 0.3
         let buttonHeight = screen_bounds.height * 0.2
         
         
         VStack(spacing: spacing) {
+            
+            Text("Editing \(schedule_settings.chosen_day)")
+                .font(.caption2)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(width: 150, height: 30)
+                .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
+
+            
         
             Text("\(String(format: "%02d:%02d", schedule_settings.scheduled_hour, schedule_settings.scheduled_min))")
                             .font(.title3)
@@ -120,6 +125,7 @@ struct TimeOfDay: View {
                 
                 Button(action: {
                     saveTime()
+                    navigationCoordinator.navigate(to: .start)
                 }) {
                     Text("Save")
                         .font(.title3)
@@ -134,7 +140,7 @@ struct TimeOfDay: View {
     }
     
     private func saveTime(){
-        schedule_settings.addCueingTime(for: selected_day, hour: schedule_settings.scheduled_hour, min: schedule_settings.scheduled_min)
+        schedule_settings.addCueingTime(for: schedule_settings.chosen_day, hour: schedule_settings.scheduled_hour, min: schedule_settings.scheduled_min)
     }
 }
 

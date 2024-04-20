@@ -33,7 +33,7 @@ struct DaysOfWeek: View {
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
                         .frame(width: buttonWidth * 0.8, height: buttonHeight)
-                        .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
+                        .background(Rectangle().fill().cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
                 
                 Text(schedule_settings.days_of_week[setting])
@@ -50,7 +50,7 @@ struct DaysOfWeek: View {
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
                         .frame(width: buttonWidth * 0.8, height: buttonHeight)
-                        .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
+                        .background(Rectangle().fill().cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
                 
                 Spacer()
@@ -71,7 +71,7 @@ struct DaysOfWeek: View {
                 Spacer()
                 
                 Button(action: {
-                    schedule_settings.chosen_day = setting
+                    schedule_settings.chosen_day = schedule_settings.days_of_week[setting]
                     navigationCoordinator.navigate(to: .timeOfDay)
                 }) {
                     Text("Edit")

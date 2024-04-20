@@ -23,7 +23,7 @@ struct CreateEditSchedule: View {
 // Edit Schedule Button ----------------------
             
             Button("Edit Schedule") {
-                navigationCoordinator.navigate(to: .cuesPerMinute)
+                navigationCoordinator.navigate(to: .editSchedule)
             }
             .multilineTextAlignment(.center)
             .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))
@@ -37,7 +37,7 @@ struct CreateEditSchedule: View {
 // Create Schedule Button --------------------
             
             Button("Create Schedule") {
-                navigationCoordinator.navigate(to: .scheduleTimeOfDay)
+                navigationCoordinator.navigate(to: .daysOfWeek)
             }
             .multilineTextAlignment(.center)
             .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))

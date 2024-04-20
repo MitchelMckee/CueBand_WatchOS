@@ -25,7 +25,7 @@ class ScheduledCueingSettings: ObservableObject {
         }
     }
     
-    @Published var chosen_day: Int = 0
+    @Published var chosen_day: String = "Monday" // default to Monday
     
     
     @Published var times_of_day: [String] = ["Morning", "Afternoon", "Evening"]

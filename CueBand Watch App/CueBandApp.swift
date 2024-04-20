@@ -21,22 +21,16 @@ struct CueBand_Watch_AppApp: App {
         WindowGroup {
             Group{
                 switch navigationCoordinator.currentPage {
-                case .start:
-                    StartView()
-                case .cuesPerMinute:
-                    CueStyle()
-                case .scheduleTimeOfDay:
-                    ScheduleTimeOfDay()
-                case .createEditSchedule:
-                    CreateEditSchedule()
-                case .vibrationInterval:
-                    CueInterval()
-                case .timeOfDay:
-                    TimeOfDay()
-                case .cueingLength:
-                    CueLength()
-                case .activeCueing:
-                    ActiveCueing()
+                case .start: StartView()
+                case .cuesPerMinute: CueStyle()
+                case .scheduleTimeOfDay: ScheduleTimeOfDay()
+                case .createEditSchedule: CreateEditSchedule()
+                case .vibrationInterval: CueInterval()
+                case .timeOfDay: TimeOfDay()
+                case .cueingLength: CueLength()
+                case .activeCueing: ActiveCueing()
+                case .daysOfWeek: DaysOfWeek()
+                case .editSchedule: EditScheduleView()
                 }
             }
             .environmentObject(navigationCoordinator)
