@@ -25,7 +25,7 @@ class ScheduledCueingSettings: ObservableObject {
         }
     }
     
-    @Published var chosen_day: String = "Monday" // default to Monday
+    @Published var chosen_day: String = "Monday" // default set to Monday
     
     
     @Published var times_of_day: [String] = ["Morning", "Afternoon", "Evening"]
@@ -42,6 +42,7 @@ class ScheduledCueingSettings: ObservableObject {
     func addCueingTime(for day: String, hour: Int, min: Int){
         let new_time = CueTime(hour: hour, min: min)
         day_schedules[day, default: []].append(new_time)
+        saveToUserDefaults()
     }
     
     func removingCueingTime(for day: String, at index: Int){

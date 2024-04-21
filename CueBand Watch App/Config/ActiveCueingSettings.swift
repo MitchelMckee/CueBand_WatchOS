@@ -43,7 +43,7 @@ class ActiveCueingSettings: ObservableObject {
         
     private func timerTick(){
         if time_remaining > 0 {
-            time_remaining -= 1000
+            time_remaining -= 1
             time_since_last_cue += 1
             
             if time_since_last_cue >= cue_interval {
