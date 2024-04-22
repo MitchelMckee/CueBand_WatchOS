@@ -14,16 +14,16 @@ struct EditScheduleDayView: View {
     
     var body: some View {
         ScrollView {
-            ForEach(Array(schedule_settings.day_schedules[schedule_settings.days_of_week[selectedDayIndex]] ?? []).indices, id: \.self) { index in
-                if let cueTime = schedule_settings.day_schedules[schedule_settings.days_of_week[selectedDayIndex]]?[index] {
-                    ScheduleRow(cueTime: cueTime, day: schedule_settings.days_of_week[selectedDayIndex], index: index)
-                        .environmentObject(schedule_settings)
-                        .environmentObject(navigationCoordinator)
-                }
+            let day = schedule_settings.edit_chosen_day
+            ForEach(schedule_settings.day_schedules[day] ?? [], id: \.self) { cueTime in
+                ScheduleRow(cueTime: cueTime, day: day)
+                    .environmentObject(schedule_settings)
+                    .environmentObject(navigationCoordinator)
             }
         }
     }
 }
+
 
 struct ScheduleRow: View {
     
@@ -32,7 +32,6 @@ struct ScheduleRow: View {
     
     var cueTime: ScheduledCueingSettings.CueTime
     var day: String
-    var index: Int
           
     var body: some View {
         

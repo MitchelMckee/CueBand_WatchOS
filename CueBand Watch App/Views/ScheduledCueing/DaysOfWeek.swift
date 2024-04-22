@@ -28,9 +28,10 @@ struct DaysOfWeek: View {
                 Button(action: {
                     self.setting = (self.setting - 1 + schedule_settings.times_of_day.count) % schedule_settings.times_of_day.count
                 }) {
-                    Text("⬅️")
+                    Image(systemName: "chevron.left")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
+                        .foregroundColor(Color.black)
                         .multilineTextAlignment(.center)
                         .frame(width: buttonWidth * 0.8, height: buttonHeight)
                         .background(Rectangle().fill().cornerRadius(radius_amount).shadow(radius: radius_amount))
@@ -45,8 +46,9 @@ struct DaysOfWeek: View {
                 Button(action: {
                     self.setting = (self.setting + 1) % schedule_settings.days_of_week.count
                 }) {
-                    Text("➡️")
+                    Image(systemName: "chevron.right")
                         .font(.title2)
+                        .foregroundColor(Color.black)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
                         .frame(width: buttonWidth * 0.8, height: buttonHeight)
@@ -74,7 +76,7 @@ struct DaysOfWeek: View {
                     schedule_settings.chosen_day = schedule_settings.days_of_week[setting]
                     navigationCoordinator.navigate(to: .timeOfDay)
                 }) {
-                    Text("Edit")
+                    Text("Add")
                         .font(.title3)
                         .padding()
                         .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)

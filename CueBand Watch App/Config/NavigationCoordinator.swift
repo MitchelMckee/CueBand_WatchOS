@@ -22,6 +22,7 @@ class NavigationCoordinator: ObservableObject {
         case activeCueing
         case daysOfWeek
         case editSchedule
+        case editDaySchedule
     }
     
     func navigate(to page: Page) {

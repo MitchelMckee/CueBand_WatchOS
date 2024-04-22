@@ -30,6 +30,7 @@ struct TimeOfDay: View {
         
         
         VStack(spacing: spacing) {
+
             
             Text("Editing \(schedule_settings.chosen_day)")
                 .font(.caption2)
@@ -38,7 +39,7 @@ struct TimeOfDay: View {
                 .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
 
             
-        
+            
             Text("\(String(format: "%02d:%02d", schedule_settings.scheduled_hour, schedule_settings.scheduled_min))")
                             .font(.title3)
                             .fixedSize(horizontal: false, vertical: true)

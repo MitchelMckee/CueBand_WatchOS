@@ -9,7 +9,7 @@ import Foundation
 
 class ScheduledCueingSettings: ObservableObject {
     
-    struct CueTime: Codable, Equatable{
+    struct CueTime: Codable, Equatable, Hashable{
         var hour: Int
         var min: Int
     }
@@ -25,8 +25,8 @@ class ScheduledCueingSettings: ObservableObject {
         }
     }
     
-    @Published var chosen_day: String = "Monday" // default set to Monday
-    
+    @Published var chosen_day: String = "Monday" // default set to Monday, this is for create schedule
+    @Published var edit_chosen_day: String = "Monday" // this is for edit schedule
     
     @Published var times_of_day: [String] = ["Morning", "Afternoon", "Evening"]
     @Published var days_of_week: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
