@@ -21,7 +21,6 @@ class NavigationCoordinator: ObservableObject {
         case cueingLength
         case activeCueing
         case daysOfWeek
-        case editSchedule
         case editDaySchedule
     }
     

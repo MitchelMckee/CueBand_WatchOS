@@ -30,7 +30,6 @@ struct CueBand_Watch_AppApp: App {
                 case .cueingLength: CueLength()
                 case .activeCueing: ActiveCueing()
                 case .daysOfWeek: DaysOfWeek()
-                case .editSchedule: EditScheduleWeekView()
                 case .editDaySchedule: EditScheduleDayView()
                 }
             }

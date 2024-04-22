@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CreateEditSchedule: View {
+    @EnvironmentObject var schedule_settings: ScheduledCueingSettings
     @EnvironmentObject var navigationCoordinator: NavigationCoordinator
     
     var body: some View {
@@ -19,24 +20,9 @@ struct CreateEditSchedule: View {
         VStack(spacing: spacing) {
         
             Spacer()
-            
-// Edit Schedule Button ----------------------
-            
+                        
             Button("Edit Schedule") {
-                navigationCoordinator.navigate(to: .editSchedule)
-            }
-            .multilineTextAlignment(.center)
-            .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))
-            .font(.title3)
-            .bold()
-            
-// -------------------------------------------
-
-            Spacer()
-            
-// Create Schedule Button --------------------
-            
-            Button("Create Schedule") {
+                schedule_settings.creating_schedule = false
                 navigationCoordinator.navigate(to: .daysOfWeek)
             }
             .multilineTextAlignment(.center)
@@ -44,11 +30,18 @@ struct CreateEditSchedule: View {
             .font(.title3)
             .bold()
             
-// -------------------------------------------
-            
             Spacer()
-
-// Back Button -------------------------------
+                        
+            Button("Create Schedule") {
+                schedule_settings.creating_schedule = true
+                navigationCoordinator.navigate(to: .daysOfWeek)
+            }
+            .multilineTextAlignment(.center)
+            .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))
+            .font(.title3)
+            .bold()
+                        
+            Spacer()
             
             Button("Back") {
                 navigationCoordinator.navigate(to: .start)
@@ -58,8 +51,6 @@ struct CreateEditSchedule: View {
             .font(.subheadline)
             .bold()
      
- // -------------------------------------------
-
         }
         .padding(.bottom) // For smaller screens
         .frame(maxWidth: .infinity) // To avoid black bars

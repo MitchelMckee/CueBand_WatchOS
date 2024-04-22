@@ -28,6 +28,8 @@ class ScheduledCueingSettings: ObservableObject {
     @Published var chosen_day: String = "Monday" // default set to Monday, this is for create schedule
     @Published var edit_chosen_day: String = "Monday" // this is for edit schedule
     
+    @Published var creating_schedule = true // bool to change between edit and create schedule
+    
     @Published var times_of_day: [String] = ["Morning", "Afternoon", "Evening"]
     @Published var days_of_week: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     @Published var day_schedules: [String: [CueTime]] = [:]

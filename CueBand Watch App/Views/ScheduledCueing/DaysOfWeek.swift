@@ -16,14 +16,18 @@ struct DaysOfWeek: View {
     @State private var radius_amount = CGFloat(60)
     @State private var object_color = Color.black
     
+    
+    
     var body: some View {
+        
+        
         
         let screen_bounds = WKInterfaceDevice.current().screenBounds
         let buttonWidth = screen_bounds.width * 0.3
         let buttonHeight = screen_bounds.height * 0.2
         
         VStack(spacing: 20){
-            HStack{
+            HStack {
                 
                 Button(action: {
                     self.setting = (self.setting - 1 + schedule_settings.times_of_day.count) % schedule_settings.times_of_day.count
@@ -73,14 +77,27 @@ struct DaysOfWeek: View {
                 Spacer()
                 
                 Button(action: {
-                    schedule_settings.chosen_day = schedule_settings.days_of_week[setting]
-                    navigationCoordinator.navigate(to: .timeOfDay)
+                    if schedule_settings.creating_schedule == true {
+                        schedule_settings.chosen_day = schedule_settings.days_of_week[setting]
+                        navigationCoordinator.navigate(to: .timeOfDay)
+                    } else {
+                        schedule_settings.edit_chosen_day = schedule_settings.days_of_week[setting]
+                        navigationCoordinator.navigate(to: .editDaySchedule)
+                    }
                 }) {
-                    Text("Add")
-                        .font(.title3)
-                        .padding()
-                        .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
-                        .background(Rectangle().fill(object_color).cornerRadius(10))
+                    if schedule_settings.creating_schedule == true {
+                        Text("Add")
+                            .font(.title3)
+                            .padding()
+                            .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
+                            .background(Rectangle().fill(object_color).cornerRadius(10))
+                    } else {
+                        Text("Edit")
+                            .font(.title3)
+                            .padding()
+                            .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
+                            .background(Rectangle().fill(object_color).cornerRadius(10))
+                    }
                 }
             }
         }
