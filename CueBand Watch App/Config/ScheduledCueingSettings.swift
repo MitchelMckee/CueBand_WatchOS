@@ -74,8 +74,8 @@ class ScheduledCueingSettings: ObservableObject {
     }
     
     private func saveToUserDefaults(){
-        if (try? PropertyListEncoder().encode(day_schedules)) != nil {
-            UserDefaults.standard.set(try? PropertyListEncoder().encode(day_schedules), forKey: "day_schedules")
+        if let encodedData = try? PropertyListEncoder().encode(day_schedules){
+            UserDefaults.standard.set(encodedData, forKey: "day_schedules")
         }
     }
     

@@ -132,7 +132,13 @@ struct TimeOfDay: View {
                         reset_editing()
                     }
                     
-                    schedule_settings.addCueingTime(for: schedule_settings.chosen_day, hour: schedule_settings.scheduled_hour, min: schedule_settings.scheduled_min)
+                    let success = schedule_settings.addCueingTime(for: schedule_settings.chosen_day, hour: schedule_settings.scheduled_hour, min: schedule_settings.scheduled_min)
+                    
+                    if success {
+                        print("Time added")
+                    } else {
+                        print("Time failed to add - it may already exist")
+                    }
                     
                     navigationCoordinator.navigate(to: .createEditSchedule)
                 }) {
