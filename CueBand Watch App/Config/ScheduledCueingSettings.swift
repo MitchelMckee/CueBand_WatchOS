@@ -30,6 +30,10 @@ class ScheduledCueingSettings: ObservableObject {
     
     @Published var creating_schedule = true // bool to change between edit and create schedule
     
+    @Published var is_editing = false
+    @Published var editing_index: Int?
+    @Published var editing_day: String?
+    
     @Published var times_of_day: [String] = ["Morning", "Afternoon", "Evening"]
     @Published var days_of_week: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     @Published var day_schedules: [String: [CueTime]] = [:]
@@ -39,6 +43,16 @@ class ScheduledCueingSettings: ObservableObject {
     
     init(){
         loadFromUserDefaults()
+    }
+    
+    func prepareForEditing(day: String, hour: Int, min: Int, index: Int) {
+        chosen_day = day
+        scheduled_hour = hour
+        scheduled_min = min
+        
+        is_editing = true
+        editing_index = index
+        editing_day = day
     }
     
     func addCueingTime(for day: String, hour: Int, min: Int) -> Bool {

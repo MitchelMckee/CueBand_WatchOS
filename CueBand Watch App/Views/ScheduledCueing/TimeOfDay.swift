@@ -12,7 +12,6 @@ struct TimeOfDay: View {
     @EnvironmentObject var settings: ActiveCueingSettings
     @EnvironmentObject var schedule_settings: ScheduledCueingSettings
     
-//    @State private var setting = 5
     @State private var radius_amount = CGFloat(60)
     @State private var object_color = Color.black
 
@@ -109,6 +108,7 @@ struct TimeOfDay: View {
             HStack {
                 Button(action: {
                     if editing_hour {
+                        reset_editing()
                         navigationCoordinator.navigate(to: .scheduleTimeOfDay)
                     } else {
                         editing_hour = true
@@ -125,7 +125,15 @@ struct TimeOfDay: View {
                 Spacer()
                 
                 Button(action: {
+                    
+                    if schedule_settings.is_editing, let index = schedule_settings.editing_index, let day = schedule_settings.editing_day {
+                        schedule_settings.removingCueingTime(for: day, at: index)
+                        
+                        reset_editing()
+                    }
+                    
                     schedule_settings.addCueingTime(for: schedule_settings.chosen_day, hour: schedule_settings.scheduled_hour, min: schedule_settings.scheduled_min)
+                    
                     navigationCoordinator.navigate(to: .createEditSchedule)
                 }) {
                     Text("Save")
@@ -136,8 +144,18 @@ struct TimeOfDay: View {
                 }
             }
         }
+        .onDisappear {
+            // Redundancy if the user closes the app while editing
+            reset_editing()
+        }
         .padding()
         .background(Color.white)
+    }
+    
+    private func reset_editing(){
+        schedule_settings.is_editing = false
+        schedule_settings.editing_index = nil
+        schedule_settings.editing_day = nil
     }
 }
 
