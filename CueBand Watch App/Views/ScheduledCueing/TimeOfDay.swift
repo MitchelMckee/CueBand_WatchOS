@@ -125,28 +125,40 @@ struct TimeOfDay: View {
                 Spacer()
                 
                 Button(action: {
-                    
-                    if schedule_settings.is_editing, let index = schedule_settings.editing_index, let day = schedule_settings.editing_day {
-                        schedule_settings.removingCueingTime(for: day, at: index)
-                        
-                        reset_editing()
-                    }
-                    
-                    let success = schedule_settings.addCueingTime(for: schedule_settings.chosen_day, hour: schedule_settings.scheduled_hour, min: schedule_settings.scheduled_min)
-                    
-                    if success {
-                        print("Time added")
+                    if editing_hour {
+                        editing_hour = false
                     } else {
-                        print("Time failed to add - it may already exist")
+                        if schedule_settings.is_editing, let index = schedule_settings.editing_index, let day = schedule_settings.editing_day {
+                            schedule_settings.removingCueingTime(for: day, at: index)
+                            
+                            reset_editing()
+                        }
+                        
+                        let success = schedule_settings.addCueingTime(for: schedule_settings.chosen_day, hour: schedule_settings.scheduled_hour, min: schedule_settings.scheduled_min)
+                        
+                        if success {
+                            print("Time added")
+                        } else {
+                            print("Time failed to add - it may already exist")
+                        }
+                        navigationCoordinator.navigate(to: .createEditSchedule)
                     }
                     
-                    navigationCoordinator.navigate(to: .createEditSchedule)
+                    
                 }) {
-                    Text("Save")
-                        .font(.title3)
-                        .padding()
-                        .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
-                        .background(Rectangle().fill(object_color).cornerRadius(10))
+                    if editing_hour {
+                        Text("Next")
+                            .font(.title3)
+                            .padding()
+                            .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
+                            .background(Rectangle().fill(object_color).cornerRadius(10))
+                    } else {
+                        Text("Save")
+                            .font(.title3)
+                            .padding()
+                            .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
+                            .background(Rectangle().fill(object_color).cornerRadius(10))
+                    }
                 }
             }
         }

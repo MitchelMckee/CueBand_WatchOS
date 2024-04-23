@@ -23,7 +23,7 @@
 		CB4FF9EC2BAB828900A06D1C /* CreateEditSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */; };
 		CB4FF9EE2BAB829C00A06D1C /* TimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */; };
 		CB55A4502BD5B9FB0034F0ED /* EditScheduleDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55A44F2BD5B9FB0034F0ED /* EditScheduleDayView.swift */; };
-		CB64D4A72BCF124600A7ABF9 /* HealthKitSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB64D4A62BCF124600A7ABF9 /* HealthKitSetup.swift */; };
+		CB64D4A72BCF124600A7ABF9 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB64D4A62BCF124600A7ABF9 /* HealthKitManager.swift */; };
 		CB88413E2B8CE67900CFA352 /* CueStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88413D2B8CE67900CFA352 /* CueStyle.swift */; };
 		CBB3BD0F2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB3BD0E2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift */; };
 		CBB3BD122BCB0EBB00CA1DE1 /* DaysOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB3BD112BCB0EBB00CA1DE1 /* DaysOfWeek.swift */; };
@@ -74,7 +74,7 @@
 		CB4FF9ED2BAB829C00A06D1C /* TimeOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDay.swift; sourceTree = "<group>"; };
 		CB55A44F2BD5B9FB0034F0ED /* EditScheduleDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScheduleDayView.swift; sourceTree = "<group>"; };
 		CB64D4A52BCEC47C00A7ABF9 /* CueBand-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CueBand-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
-		CB64D4A62BCF124600A7ABF9 /* HealthKitSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetup.swift; sourceTree = "<group>"; };
+		CB64D4A62BCF124600A7ABF9 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		CB88413D2B8CE67900CFA352 /* CueStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueStyle.swift; sourceTree = "<group>"; };
 		CBB3BD0E2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledCueingSettings.swift; sourceTree = "<group>"; };
 		CBB3BD112BCB0EBB00CA1DE1 /* DaysOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfWeek.swift; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 				CB2D6A782BC0813B00B62E61 /* ActiveCueingSettings.swift */,
 				CBB3BD0E2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift */,
 				CBBB1A762BD2B8AF00A68A75 /* NotificationManager.swift */,
-				CB64D4A62BCF124600A7ABF9 /* HealthKitSetup.swift */,
+				CB64D4A62BCF124600A7ABF9 /* HealthKitManager.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -420,7 +420,7 @@
 				CBD86F472BBE244E00FAAA62 /* NavigationCoordinator.swift in Sources */,
 				CB2D6A792BC0813B00B62E61 /* ActiveCueingSettings.swift in Sources */,
 				CBB3BD0F2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift in Sources */,
-				CB64D4A72BCF124600A7ABF9 /* HealthKitSetup.swift in Sources */,
+				CB64D4A72BCF124600A7ABF9 /* HealthKitManager.swift in Sources */,
 				CB1811CB2B7929BC00AAC6D5 /* CueBandApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

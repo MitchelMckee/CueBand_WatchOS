@@ -63,14 +63,18 @@ class ScheduledCueingSettings: ObservableObject {
         } else {
             day_schedules[day, default: []].append(new_time)
             saveToUserDefaults()
+            scheduleNotification(for: day, hour: hour, min: min)
             return true
         }
     }
     
     func removingCueingTime(for day: String, at index: Int){
-        guard day_schedules[day] != nil else { return }
+        guard let times = day_schedules[day], index < times.count else { return }
+        let cueTime = times[index]
         day_schedules[day]!.remove(at: index)
         saveToUserDefaults()
+        
+        removeNotification(for: day, hour: cueTime.hour, min: cueTime.min)
     }
     
     private func saveToUserDefaults(){

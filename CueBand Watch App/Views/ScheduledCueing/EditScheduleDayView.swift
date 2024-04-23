@@ -70,9 +70,6 @@ struct ScheduleRow: View {
     
             Button(action: {
                 schedule_settings.prepareForEditing(day: day, hour: cueTime.hour, min: cueTime.min, index: index)
-//                schedule_settings.chosen_day = day
-//                schedule_settings.scheduled_hour = cueTime.hour
-//                schedule_settings.scheduled_min = cueTime.min
                 navigationCoordinator.navigate(to: .timeOfDay)
             }) {
                 Image(systemName: "pencil")
