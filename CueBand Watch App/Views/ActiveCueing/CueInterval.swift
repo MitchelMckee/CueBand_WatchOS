@@ -30,7 +30,7 @@ struct CueInterval: View {
                     }
                     
                 }) {
-                    Text("➖")
+                    Image(systemName: "minus")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
@@ -56,7 +56,7 @@ struct CueInterval: View {
                         settings.cue_interval += increment_amount
                     }
                 }) {
-                    Text("➕")
+                    Image(systemName: "plus")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)

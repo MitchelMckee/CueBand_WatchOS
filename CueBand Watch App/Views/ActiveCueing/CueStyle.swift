@@ -30,7 +30,7 @@ struct CueStyle: View {
                     }
                     
                 }) {
-                    Text("➖")
+                    Image(systemName: "minus")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
@@ -55,7 +55,7 @@ struct CueStyle: View {
                         self.settings.cue_style += increment_amount
                     }
                 }) {
-                    Text("➕")
+                    Image(systemName: "plus")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)

@@ -43,7 +43,7 @@ struct CueLength: View {
                         settings.cueing_length = max(0, settings.cueing_length - increment_amount)
                     }
                 }) {
-                    Text("➖")
+                    Image(systemName: "minus")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
@@ -67,7 +67,7 @@ struct CueLength: View {
                         settings.cueing_length += increment_amount
                     }
                 }) {
-                    Text("➕")
+                    Image(systemName: "plus")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)

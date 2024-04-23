@@ -60,7 +60,7 @@ struct TimeOfDay: View {
                             }
                     }
                 }) {
-                    Text("➖")
+                    Image(systemName: "minus")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
@@ -94,7 +94,7 @@ struct TimeOfDay: View {
                         }
                     }
                 }) {
-                    Text("➕")
+                    Image(systemName: "plus")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)

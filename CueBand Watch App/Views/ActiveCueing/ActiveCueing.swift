@@ -53,7 +53,7 @@ struct ActiveCueing: View {
                     healthKitManager.endWorkout()
                     navigationCoordinator.navigate(to: .start)
                 }) {
-                    Text("🛑")
+                    Image(systemName: "xmark")
                         .font(.title2)
                 }
                 .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: 60, height: 60, radius: 10))
@@ -61,7 +61,7 @@ struct ActiveCueing: View {
                 Button(action: {
                     navigationCoordinator.navigate(to: .cuesPerMinute)
                 }) {
-                    Text("⚙️")
+                    Image(systemName: "gearshape")
                         .font(.title2)
                 }
                 .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: 60, height: 60, radius: 10))

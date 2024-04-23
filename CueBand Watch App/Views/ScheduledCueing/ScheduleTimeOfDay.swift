@@ -34,7 +34,7 @@ struct ScheduleTimeOfDay: View {
                 Button(action: {
                     self.setting = (self.setting - 1 + schedule_settings.times_of_day.count) % schedule_settings.times_of_day.count
                 }) {
-                    Text("➖")
+                    Image(systemName: "minus")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
@@ -55,7 +55,7 @@ struct ScheduleTimeOfDay: View {
                 Button(action: {
                     self.setting = (self.setting + 1) % schedule_settings.times_of_day.count
                 }) {
-                    Text("➕")
+                    Image(systemName: "plus")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)

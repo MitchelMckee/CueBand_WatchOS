@@ -35,14 +35,14 @@ struct DaysOfWeek: View {
                         .fixedSize(horizontal: false, vertical: true)
                         .foregroundColor(Color.black)
                         .multilineTextAlignment(.center)
-                        .frame(width: buttonWidth * 0.8, height: buttonHeight)
+                        .frame(width: buttonWidth * 0.7, height: buttonHeight)
                         .background(Rectangle().fill().cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
                 
                 Text(schedule_settings.days_of_week[setting])
                     .font(.caption)
                     .fixedSize(horizontal: false, vertical: true)
-                    .frame(width: 70, height: 60)
+                    .frame(width: 80, height: 60)
                     .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
                 
                 Button(action: {
@@ -53,7 +53,7 @@ struct DaysOfWeek: View {
                         .foregroundColor(Color.black)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
-                        .frame(width: buttonWidth * 0.8, height: buttonHeight)
+                        .frame(width: buttonWidth * 0.7, height: buttonHeight)
                         .background(Rectangle().fill().cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
                 
