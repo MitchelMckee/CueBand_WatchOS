@@ -22,18 +22,19 @@ struct EditScheduleDayView: View {
         
         VStack {
             
-            if schedule_settings.day_schedules[day] == nil {
+            if cueTimes.isEmpty {
                 Text("No sessions scheduled!")
                     .foregroundColor(Color.black)
                     .multilineTextAlignment(.center)
-            }
-            
-            ScrollView {
-                ForEach(0..<cueTimes.count, id: \.self) { index in
-                    let cueTime = cueTimes[index]
-                    ScheduleRow(cueTime: cueTime, day: day, index: index)
-                        .environmentObject(schedule_settings)
-                        .environmentObject(navigationCoordinator)
+            } else {
+                
+                ScrollView {
+                    ForEach(0..<cueTimes.count, id: \.self) { index in
+                        let cueTime = cueTimes[index]
+                        ScheduleRow(cueTime: cueTime, day: day, index: index)
+                            .environmentObject(schedule_settings)
+                            .environmentObject(navigationCoordinator)
+                    }
                 }
             }
             Button("Back"){
