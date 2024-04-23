@@ -125,8 +125,8 @@ struct TimeOfDay: View {
                 Spacer()
                 
                 Button(action: {
-                    saveTime()
-                    navigationCoordinator.navigate(to: .start)
+                    schedule_settings.addCueingTime(for: schedule_settings.chosen_day, hour: schedule_settings.scheduled_hour, min: schedule_settings.scheduled_min)
+                    navigationCoordinator.navigate(to: .createEditSchedule)
                 }) {
                     Text("Save")
                         .font(.title3)
@@ -138,10 +138,6 @@ struct TimeOfDay: View {
         }
         .padding()
         .background(Color.white)
-    }
-    
-    private func saveTime(){
-        schedule_settings.addCueingTime(for: schedule_settings.chosen_day, hour: schedule_settings.scheduled_hour, min: schedule_settings.scheduled_min)
     }
 }
 

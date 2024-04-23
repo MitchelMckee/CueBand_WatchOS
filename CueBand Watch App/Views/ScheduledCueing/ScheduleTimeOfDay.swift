@@ -68,7 +68,7 @@ struct ScheduleTimeOfDay: View {
 
             HStack {
                 Button(action: {
-                    navigationCoordinator.navigate(to: .createEditSchedule)
+                    navigationCoordinator.navigate(to: .daysOfWeek)
                 }) {
                     Text("Back")
                         .font(.title3)

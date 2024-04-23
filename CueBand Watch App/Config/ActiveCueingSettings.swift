@@ -25,7 +25,7 @@ class ActiveCueingSettings: ObservableObject {
     
     func startCueing() {
         finished_cueing = false
-        print("Cues Per Min: ", cue_interval)
+        print("Cue Interval: ", cue_interval)
         print("Cue Style: ", cue_style)
         
         if timer == nil {
@@ -63,7 +63,7 @@ class ActiveCueingSettings: ObservableObject {
         let vibInterval = 0.4 // Small interval to stop vibrations stacking
             for i in 0..<repeatCount {
                 DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) * vibInterval) {
-                    WKInterfaceDevice.current().play(.notification)
+                    WKInterfaceDevice.current().play(.success)
                 }
             }
         }

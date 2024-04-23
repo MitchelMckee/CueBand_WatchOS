@@ -41,10 +41,16 @@ class ScheduledCueingSettings: ObservableObject {
         loadFromUserDefaults()
     }
     
-    func addCueingTime(for day: String, hour: Int, min: Int){
+    func addCueingTime(for day: String, hour: Int, min: Int) -> Bool {
         let new_time = CueTime(hour: hour, min: min)
-        day_schedules[day, default: []].append(new_time)
-        saveToUserDefaults()
+        
+        if let timesForDay = day_schedules[day], timesForDay.contains(new_time){
+            return false
+        } else {
+            day_schedules[day, default: []].append(new_time)
+            saveToUserDefaults()
+            return true
+        }
     }
     
     func removingCueingTime(for day: String, at index: Int){
@@ -54,7 +60,7 @@ class ScheduledCueingSettings: ObservableObject {
     }
     
     private func saveToUserDefaults(){
-        if let encodedData = try? PropertyListEncoder().encode(day_schedules) {
+        if (try? PropertyListEncoder().encode(day_schedules)) != nil {
             UserDefaults.standard.set(try? PropertyListEncoder().encode(day_schedules), forKey: "day_schedules")
         }
     }

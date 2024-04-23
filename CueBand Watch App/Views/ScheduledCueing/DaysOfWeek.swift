@@ -20,8 +20,6 @@ struct DaysOfWeek: View {
     
     var body: some View {
         
-        
-        
         let screen_bounds = WKInterfaceDevice.current().screenBounds
         let buttonWidth = screen_bounds.width * 0.3
         let buttonHeight = screen_bounds.height * 0.2
@@ -79,14 +77,14 @@ struct DaysOfWeek: View {
                 Button(action: {
                     if schedule_settings.creating_schedule == true {
                         schedule_settings.chosen_day = schedule_settings.days_of_week[setting]
-                        navigationCoordinator.navigate(to: .timeOfDay)
+                        navigationCoordinator.navigate(to: .scheduleTimeOfDay)
                     } else {
                         schedule_settings.edit_chosen_day = schedule_settings.days_of_week[setting]
                         navigationCoordinator.navigate(to: .editDaySchedule)
                     }
                 }) {
                     if schedule_settings.creating_schedule == true {
-                        Text("Add")
+                        Text("Next")
                             .font(.title3)
                             .padding()
                             .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
