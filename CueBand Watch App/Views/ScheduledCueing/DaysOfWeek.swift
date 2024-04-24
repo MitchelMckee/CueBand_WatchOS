@@ -28,15 +28,16 @@ struct DaysOfWeek: View {
             HStack {
                 
                 Button(action: {
+                    trigger_haptic()
                     self.setting = (self.setting - 1 + schedule_settings.times_of_day.count) % schedule_settings.times_of_day.count
                 }) {
                     Image(systemName: "chevron.left")
                         .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Color.white)
                         .multilineTextAlignment(.center)
                         .frame(width: buttonWidth * 0.7, height: buttonHeight)
-                        .background(Rectangle().fill().cornerRadius(radius_amount).shadow(radius: radius_amount))
+                        .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
                 
                 Text(schedule_settings.days_of_week[setting])
@@ -46,15 +47,16 @@ struct DaysOfWeek: View {
                     .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
                 
                 Button(action: {
+                    trigger_haptic()
                     self.setting = (self.setting + 1) % schedule_settings.days_of_week.count
                 }) {
                     Image(systemName: "chevron.right")
                         .font(.title2)
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Color.white)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.center)
                         .frame(width: buttonWidth * 0.7, height: buttonHeight)
-                        .background(Rectangle().fill().cornerRadius(radius_amount).shadow(radius: radius_amount))
+                        .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
                 }
                 
                 Spacer()
@@ -63,18 +65,20 @@ struct DaysOfWeek: View {
             
             HStack {
                 Button(action: {
+                    trigger_haptic()
                     navigationCoordinator.navigate(to: .createEditSchedule)
                 }) {
                     Text("Back")
                         .font(.title3)
                         .padding()
                         .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
-                        .background(Rectangle().fill(object_color).cornerRadius(10))
+                        .background(Rectangle().fill(object_color).opacity(0.8).cornerRadius(10))
                 }
                 
                 Spacer()
                 
                 Button(action: {
+                    trigger_haptic()
                     if schedule_settings.creating_schedule == true {
                         schedule_settings.chosen_day = schedule_settings.days_of_week[setting]
                         navigationCoordinator.navigate(to: .scheduleTimeOfDay)

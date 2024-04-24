@@ -29,6 +29,7 @@ struct CueStyle: View {
             
             HStack {
                 Button(action: {
+                    trigger_haptic()
                     if settings.cue_style > 1  {
                         self.settings.cue_style -= increment_amount
                     }
@@ -53,6 +54,7 @@ struct CueStyle: View {
                 Spacer()
                 
                 Button(action: {
+                    trigger_haptic()
                     if settings.cue_style >= 3 {
                         self.settings.cue_style = self.settings.cue_style
                     } else {
@@ -72,18 +74,20 @@ struct CueStyle: View {
             
             HStack {
                 Button(action: {
+                    trigger_haptic()
                     navigationCoordinator.navigate(to: .start)
                 }) {
                     Text("Back")
                         .font(.title3)
                         .padding()
                         .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
-                        .background(Rectangle().fill(object_color).cornerRadius(10))
+                        .background(Rectangle().fill(object_color).opacity(0.8).cornerRadius(10))
                 }
                 
                 Spacer()
                 
                 Button(action: {
+                    trigger_haptic()
                     navigationCoordinator.navigate(to: .cueingLength)
                 }) {
                     Text("Next")

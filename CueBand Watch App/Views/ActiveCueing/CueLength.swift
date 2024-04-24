@@ -39,6 +39,7 @@ struct CueLength: View {
                 .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
             HStack {
                 Button(action: {
+                    trigger_haptic()
                     if settings.cueing_length != 10 {
                         settings.cueing_length = max(0, settings.cueing_length - increment_amount)
                     }
@@ -63,6 +64,7 @@ struct CueLength: View {
                 Spacer()
 
                 Button(action: {
+                    trigger_haptic()
                     if settings.cueing_length < 60{
                         settings.cueing_length += increment_amount
                     }
@@ -80,18 +82,20 @@ struct CueLength: View {
 
             HStack {
                 Button(action: {
+                    trigger_haptic()
                     navigationCoordinator.navigate(to: .cuesPerMinute)
                 }) {
                     Text("Back")
                         .font(.title3)
                         .padding()
                         .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
-                        .background(Rectangle().fill(object_color).cornerRadius(10))
+                        .background(Rectangle().fill(object_color).opacity(0.8).cornerRadius(10))
                 }
                 
                 Spacer()
                 
                 Button(action: {
+                    trigger_haptic()
                     navigationCoordinator.navigate(to: .vibrationInterval)
                 }) {
                     Text("Next")

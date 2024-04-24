@@ -12,29 +12,25 @@ struct StartView: View {
               VStack(spacing: spacing) {
                   
                   Spacer()
-
-// Start button ------------------------------
                   
                   Button("Start") {
+                      trigger_haptic()
                       navigationCoordinator.navigate(to: .cuesPerMinute)
                   }
                   .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width, height: 80, radius: 20))
                   .font(.title)
                   .bold()
-                  
-// -------------------------------------------
-                  
+                                    
                   Spacer()
                   
-// Schedule button ---------------------------
                   Button("Schedule") {
+                      trigger_haptic()
                       navigationCoordinator.navigate(to: .createEditSchedule)
                   }
                   .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))
                   .font(.title3)
                   .bold()
                   
-// -------------------------------------------
                   Spacer()
               }
               .padding()

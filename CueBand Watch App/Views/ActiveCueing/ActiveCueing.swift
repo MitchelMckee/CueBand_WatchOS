@@ -15,6 +15,7 @@ struct ActiveCueing: View {
     @EnvironmentObject var healthKitManager: HealthKitManager
     
     @State private var radius_amount = CGFloat(10)
+    @State private var showing_stop_alert = false
     
     var body: some View {
         
@@ -49,9 +50,8 @@ struct ActiveCueing: View {
             HStack(spacing: spacing) {
                                 
                 Button(action: {
-                    settings.stopCueing()
-                    healthKitManager.endWorkout()
-                    navigationCoordinator.navigate(to: .start)
+                    trigger_haptic()
+                    self.showing_stop_alert = true
                 }) {
                     Image(systemName: "xmark")
                         .foregroundColor(Color.white)
@@ -60,6 +60,7 @@ struct ActiveCueing: View {
                 .buttonStyle(CustomButtonStyle(color: .red, textColor: .white, width: 60, height: 60, radius: 10))
 
                 Button(action: {
+                    trigger_haptic()
                     navigationCoordinator.navigate(to: .cuesPerMinute)
                 }) {
                     Image(systemName: "gearshape")
@@ -73,6 +74,15 @@ struct ActiveCueing: View {
             print("View appeared - timer started")
             healthKitManager.startWorkout()
             settings.startCueing()
+        }
+        .alert("Stop Cueing", isPresented: $showing_stop_alert){
+            Button("Cancel", role: .cancel){trigger_haptic()}
+            Button("Confirm", role: .destructive){
+                trigger_haptic()
+                settings.stopCueing()
+                healthKitManager.endWorkout()
+                navigationCoordinator.navigate(to: .start)
+            }
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -38,6 +38,7 @@ struct EditScheduleDayView: View {
                 }
             }
             Button("Back"){
+                trigger_haptic()
                 navigationCoordinator.navigate(to: .daysOfWeek)
             }
             .multilineTextAlignment(.center)

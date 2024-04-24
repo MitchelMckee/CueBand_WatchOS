@@ -25,3 +25,7 @@ struct CustomButtonStyle: ButtonStyle {
             .animation(.easeOut, value: configuration.isPressed)
     }
 }
+
+func trigger_haptic(){
+    WKInterfaceDevice.current().play(.click)
+}

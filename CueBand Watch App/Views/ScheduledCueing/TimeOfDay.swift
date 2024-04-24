@@ -43,6 +43,7 @@ struct TimeOfDay: View {
             
             HStack {
                 Button(action: {
+                    trigger_haptic()
                     if editing_hour {
                         if schedule_settings.scheduled_hour > 0 {
                             schedule_settings.scheduled_hour -= 1
@@ -75,6 +76,7 @@ struct TimeOfDay: View {
                 Spacer()
                 
                 Button(action: {
+                    trigger_haptic()
                     if editing_hour {
                         if schedule_settings.scheduled_hour < 23 {
                             schedule_settings.scheduled_hour += 1
@@ -103,6 +105,7 @@ struct TimeOfDay: View {
             
             HStack {
                 Button(action: {
+                    trigger_haptic()
                     if editing_hour {
                         reset_editing()
                         navigationCoordinator.navigate(to: .scheduleTimeOfDay)
@@ -115,12 +118,13 @@ struct TimeOfDay: View {
                         .font(.title3)
                         .padding()
                         .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
-                        .background(Rectangle().fill(object_color).cornerRadius(10))
+                        .background(Rectangle().fill(object_color).opacity(0.8).cornerRadius(10))
                 }
                 
                 Spacer()
                 
                 Button(action: {
+                    trigger_haptic()
                     if editing_hour {
                         editing_hour = false
                     } else {

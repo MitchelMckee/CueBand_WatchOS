@@ -32,6 +32,7 @@ struct ScheduleTimeOfDay: View {
             
             HStack {
                 Button(action: {
+                    trigger_haptic()
                     self.setting = (self.setting - 1 + schedule_settings.times_of_day.count) % schedule_settings.times_of_day.count
                 }) {
                     Image(systemName: "minus")
@@ -53,6 +54,7 @@ struct ScheduleTimeOfDay: View {
                 Spacer()
 
                 Button(action: {
+                    trigger_haptic()
                     self.setting = (self.setting + 1) % schedule_settings.times_of_day.count
                 }) {
                     Image(systemName: "plus")
@@ -68,18 +70,20 @@ struct ScheduleTimeOfDay: View {
 
             HStack {
                 Button(action: {
+                    trigger_haptic()
                     navigationCoordinator.navigate(to: .daysOfWeek)
                 }) {
                     Text("Back")
                         .font(.title3)
                         .padding()
                         .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
-                        .background(Rectangle().fill(object_color).cornerRadius(10))
+                        .background(Rectangle().fill(object_color).opacity(0.8).cornerRadius(10))
                 }
 
                 Spacer()
 
                 Button(action: {
+                    trigger_haptic()
                     schedule_settings.chosen_time_of_day = setting
                     navigationCoordinator.navigate(to: .timeOfDay)
                 }) {

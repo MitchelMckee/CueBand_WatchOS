@@ -29,6 +29,7 @@ struct CueInterval: View {
             
             HStack {
                 Button(action: {
+                    trigger_haptic()
                     if settings.cue_interval > 5  {
                         settings.cue_interval -= increment_amount
                     }
@@ -54,6 +55,7 @@ struct CueInterval: View {
                 Spacer()
 
                 Button(action: {
+                    trigger_haptic()
                     if settings.cue_interval >= 60 {
                         settings.cue_interval = settings.cue_interval
                     } else {
@@ -73,18 +75,20 @@ struct CueInterval: View {
 
             HStack {
                 Button(action: {
+                    trigger_haptic()
                     navigationCoordinator.navigate(to: .cueingLength)
                 }) {
                     Text("Back")
                         .font(.title3)
                         .padding()
                         .frame(width: buttonWidth * 1.3, height: buttonHeight * 1.3)
-                        .background(Rectangle().fill(object_color).cornerRadius(10))
+                        .background(Rectangle().fill(object_color).opacity(0.8).cornerRadius(10))
                 }
                 
                 Spacer()
                 
                 Button(action: {
+                    trigger_haptic()
                     navigationCoordinator.navigate(to: .activeCueing)
                 }) {
                     Text("Start")

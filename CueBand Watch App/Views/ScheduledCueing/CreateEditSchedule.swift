@@ -34,6 +34,7 @@ struct CreateEditSchedule: View {
             Spacer()
                         
             Button("Create Schedule") {
+                trigger_haptic()
                 schedule_settings.creating_schedule = true
                 navigationCoordinator.navigate(to: .daysOfWeek)
             }
@@ -45,6 +46,7 @@ struct CreateEditSchedule: View {
             Spacer()
             
             Button("Back") {
+                trigger_haptic()
                 navigationCoordinator.navigate(to: .start)
             }
             .multilineTextAlignment(.center)

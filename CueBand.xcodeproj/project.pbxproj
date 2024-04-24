@@ -17,7 +17,7 @@
 		CB1811E62B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811E52B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift */; };
 		CB1811E82B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1811E72B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift */; };
 		CB2D6A792BC0813B00B62E61 /* ActiveCueingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2D6A782BC0813B00B62E61 /* ActiveCueingSettings.swift */; };
-		CB2D6A7B2BC1B04C00B62E61 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2D6A7A2BC1B04C00B62E61 /* CustomButtonStyle.swift */; };
+		CB2D6A7B2BC1B04C00B62E61 /* CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2D6A7A2BC1B04C00B62E61 /* CustomStyles.swift */; };
 		CB4FF9E62BAB7AEB00A06D1C /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9E52BAB7AEB00A06D1C /* StartView.swift */; };
 		CB4FF9E82BAB808700A06D1C /* CueLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9E72BAB808700A06D1C /* CueLength.swift */; };
 		CB4FF9EC2BAB828900A06D1C /* CreateEditSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FF9EB2BAB828900A06D1C /* CreateEditSchedule.swift */; };
@@ -62,7 +62,7 @@
 		CB1811E52B7929BD00AAC6D5 /* CueBand_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueBand_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		CB1811E72B7929BD00AAC6D5 /* CueBand_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueBand_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CB2D6A782BC0813B00B62E61 /* ActiveCueingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCueingSettings.swift; sourceTree = "<group>"; };
-		CB2D6A7A2BC1B04C00B62E61 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		CB2D6A7A2BC1B04C00B62E61 /* CustomStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyles.swift; sourceTree = "<group>"; };
 		CB2D6A802BC304FA00B62E61 /* CueBand Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CueBand Watch App.entitlements"; sourceTree = "<group>"; };
 		CB4FF9E52BAB7AEB00A06D1C /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		CB4FF9E72BAB808700A06D1C /* CueLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueLength.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				CBD86F462BBE244E00FAAA62 /* NavigationCoordinator.swift */,
-				CB2D6A7A2BC1B04C00B62E61 /* CustomButtonStyle.swift */,
+				CB2D6A7A2BC1B04C00B62E61 /* CustomStyles.swift */,
 				CB2D6A782BC0813B00B62E61 /* ActiveCueingSettings.swift */,
 				CBB3BD0E2BCAD3CB00CA1DE1 /* ScheduledCueingSettings.swift */,
 				CBBB1A762BD2B8AF00A68A75 /* NotificationManager.swift */,
@@ -346,7 +346,7 @@
 				CB4FF9E62BAB7AEB00A06D1C /* StartView.swift in Sources */,
 				CB4FF9E82BAB808700A06D1C /* CueLength.swift in Sources */,
 				CBBB1A772BD2B8AF00A68A75 /* NotificationManager.swift in Sources */,
-				CB2D6A7B2BC1B04C00B62E61 /* CustomButtonStyle.swift in Sources */,
+				CB2D6A7B2BC1B04C00B62E61 /* CustomStyles.swift in Sources */,
 				CBB3BD122BCB0EBB00CA1DE1 /* DaysOfWeek.swift in Sources */,
 				CB08ADD62BB6E58A007FD97A /* CueInterval.swift in Sources */,
 				CB16FA552B9FA202007E3479 /* ActiveCueing.swift in Sources */,
