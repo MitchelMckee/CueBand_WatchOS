@@ -18,11 +18,15 @@ struct CueInterval: View {
     var body: some View {
         
         let screen_bounds = WKInterfaceDevice.current().screenBounds
-        let spacing = screen_bounds.height * 0.1
+        let spacing = screen_bounds.height * 0.03
         let buttonWidth = screen_bounds.width * 0.3
         let buttonHeight = screen_bounds.height * 0.2
         
         VStack(spacing: spacing) {
+            Text("Cueing Interval")
+                .frame(width: 150, height: 30)
+                .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
+            
             HStack {
                 Button(action: {
                     if settings.cue_interval > 5  {

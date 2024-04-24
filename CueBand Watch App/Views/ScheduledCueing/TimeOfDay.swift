@@ -28,12 +28,19 @@ struct TimeOfDay: View {
         
         VStack(spacing: spacing) {
             
-            Text("\(String(format: "%02d:%02d", schedule_settings.scheduled_hour, schedule_settings.scheduled_min))")
-                            .font(.title3)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .frame(width: 100, height: 30)
-                            .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
-
+        
+            Group {
+                Text("\(String(format: "%02d", schedule_settings.scheduled_hour))")
+                    .foregroundColor(editing_hour ? Color.red : Color.white)
+                + Text(":")
+                    .foregroundColor(Color.white)
+                + Text("\(String(format: "%02d", schedule_settings.scheduled_min))")
+                    .foregroundColor(editing_hour ? Color.white : Color.red)
+                
+            }
+            .frame(width: 100, height: 30)
+            .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
+            
             HStack {
                 Button(action: {
                     if editing_hour {

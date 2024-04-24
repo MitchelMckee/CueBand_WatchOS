@@ -54,9 +54,10 @@ struct ActiveCueing: View {
                     navigationCoordinator.navigate(to: .start)
                 }) {
                     Image(systemName: "xmark")
+                        .foregroundColor(Color.white)
                         .font(.title2)
                 }
-                .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: 60, height: 60, radius: 10))
+                .buttonStyle(CustomButtonStyle(color: .red, textColor: .white, width: 60, height: 60, radius: 10))
 
                 Button(action: {
                     navigationCoordinator.navigate(to: .cuesPerMinute)

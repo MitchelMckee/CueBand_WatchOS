@@ -23,6 +23,10 @@ struct CueStyle: View {
         let spacing = screen_bounds.width * 0.05
         
         VStack(spacing: spacing) {
+            Text("Cueing Style")
+                .frame(width: 150, height: 30)
+                .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
+            
             HStack {
                 Button(action: {
                     if settings.cue_style > 1  {
@@ -49,7 +53,7 @@ struct CueStyle: View {
                 Spacer()
                 
                 Button(action: {
-                    if settings.cue_style >= 6 {
+                    if settings.cue_style >= 3 {
                         self.settings.cue_style = self.settings.cue_style
                     } else {
                         self.settings.cue_style += increment_amount

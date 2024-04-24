@@ -20,15 +20,16 @@ struct CreateEditSchedule: View {
         VStack(spacing: spacing) {
         
             Spacer()
-                        
-            Button("Edit Schedule") {
-                schedule_settings.creating_schedule = false
-                navigationCoordinator.navigate(to: .daysOfWeek)
+            if schedule_settings.day_schedules.contains(where: { !$0.value.isEmpty }) {
+                Button("Edit Schedule") {
+                    schedule_settings.creating_schedule = false
+                    navigationCoordinator.navigate(to: .daysOfWeek)
+                }
+                .multilineTextAlignment(.center)
+                .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))
+                .font(.title3)
+                .bold()
             }
-            .multilineTextAlignment(.center)
-            .buttonStyle(CustomButtonStyle(color: .black, textColor: .white, width: max_button_width * 0.8, height: 60, radius: 20))
-            .font(.title3)
-            .bold()
             
             Spacer()
                         
@@ -63,5 +64,6 @@ struct CreateEditSchedule_Preview: PreviewProvider {
         CreateEditSchedule()
             .environmentObject(NavigationCoordinator())
             .environmentObject(ActiveCueingSettings())
+            .environmentObject(ScheduledCueingSettings())
     }
 }
