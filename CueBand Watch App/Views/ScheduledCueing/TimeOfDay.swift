@@ -9,13 +9,11 @@ import SwiftUI
 
 struct TimeOfDay: View {
     @EnvironmentObject var navigationCoordinator: NavigationCoordinator
-    @EnvironmentObject var settings: ActiveCueingSettings
     @EnvironmentObject var schedule_settings: ScheduledCueingSettings
     
     @State private var radius_amount = CGFloat(60)
     @State private var object_color = Color.black
 
-    
     @State private var editing_hour = true
     @State private var max_hours = 23
     @State private var max_mins = 58
@@ -29,15 +27,6 @@ struct TimeOfDay: View {
         
         
         VStack(spacing: spacing) {
-
-            
-            Text("Editing \(schedule_settings.chosen_day)")
-                .font(.caption2)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(width: 150, height: 30)
-                .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
-
-            
             
             Text("\(String(format: "%02d:%02d", schedule_settings.scheduled_hour, schedule_settings.scheduled_min))")
                             .font(.title3)
@@ -73,7 +62,7 @@ struct TimeOfDay: View {
                 Text(editing_hour ? String(format: "%02d", schedule_settings.scheduled_hour) : String(format: "%02d", schedule_settings.scheduled_min))
                     .font(.title2)
                     .fixedSize(horizontal: false, vertical: true)
-                    .frame(width: 75, height: 60)
+                    .frame(width: 60, height: 60)
                     .background(Rectangle().fill(object_color).cornerRadius(radius_amount).shadow(radius: radius_amount))
                                         
                 Spacer()

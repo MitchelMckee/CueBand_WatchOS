@@ -22,7 +22,7 @@ struct ScheduleTimeOfDay: View {
         let buttonWidth = screen_bounds.width * 0.3
         let buttonHeight = screen_bounds.height * 0.2
         
-        VStack(spacing: 10) {
+        VStack(spacing: 5) {
             
             Text("Editing \(schedule_settings.chosen_day)")
                 .font(.caption2)

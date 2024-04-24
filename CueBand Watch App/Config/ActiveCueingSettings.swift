@@ -15,10 +15,10 @@ class ActiveCueingSettings: ObservableObject {
             time_remaining = cueing_length * 60 // Change to mins
         }
     }
-    @Published var cue_interval: Int = 5
-    @Published var cue_style: Int = 1
+    @Published var cue_interval: Int = 5 // Cue every 5 seconds by default
+    @Published var cue_style: Int = 1 // One instance of the haptic per interval
     @Published var time_remaining: Int = 3600 // Default to an hour
-    @Published var finished_cueing = false
+    @Published var finished_cueing = false // To show finished screen
     
     private var timer: Timer?
     private var time_since_last_cue = 0
@@ -60,7 +60,7 @@ class ActiveCueingSettings: ObservableObject {
     
     func triggerVibrations(repeatCount: Int){
         print("Triggering Vibrations")
-        let vibInterval = 0.4 // Small interval to stop vibrations stacking
+        let vibInterval = 0.4 // interval to stop vibrations stacking
             for i in 0..<repeatCount {
                 DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) * vibInterval) {
                     WKInterfaceDevice.current().play(.success)

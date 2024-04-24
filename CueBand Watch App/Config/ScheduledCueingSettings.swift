@@ -30,13 +30,15 @@ class ScheduledCueingSettings: ObservableObject {
     
     @Published var creating_schedule = true // bool to change between edit and create schedule
     
+    // make sure that a session being editing is
+    // not deleted if it isn't meant to be
     @Published var is_editing = false
     @Published var editing_index: Int?
     @Published var editing_day: String?
     
     @Published var times_of_day: [String] = ["Morning", "Afternoon", "Evening"]
     @Published var days_of_week: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    @Published var day_schedules: [String: [CueTime]] = [:]
+    @Published var day_schedules: [String: [CueTime]] = [:] // Store saved schedules
     
     @Published var scheduled_hour: Int = 10
     @Published var scheduled_min: Int = 10
@@ -73,7 +75,6 @@ class ScheduledCueingSettings: ObservableObject {
         let cueTime = times[index]
         day_schedules[day]!.remove(at: index)
         saveToUserDefaults()
-        
         removeNotification(for: day, hour: cueTime.hour, min: cueTime.min)
     }
     
