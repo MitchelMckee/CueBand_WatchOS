@@ -56,7 +56,7 @@ struct CueInterval: View {
 
                 Button(action: {
                     trigger_haptic()
-                    if settings.cue_interval >= 60 {
+                    if settings.cue_interval >= 120 {
                         settings.cue_interval = settings.cue_interval
                     } else {
                         settings.cue_interval += increment_amount
