@@ -41,6 +41,7 @@ func scheduleNotification(for day: String, hour: Int, min: Int) {
     content.sound = UNNotificationSound.default
     
     var date_components = DateComponents()
+    date_components.weekday = weekdayNumber(from: day)
     date_components.hour = hour
     date_components.minute = min
     
@@ -60,3 +61,8 @@ func removeNotification(for day: String, hour: Int, min: Int){
     UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
 }
 
+
+private func weekdayNumber(from day: String) -> Int {
+    let days_of_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    return days_of_week.firstIndex(of: day) ?? 0 + 1
+}
