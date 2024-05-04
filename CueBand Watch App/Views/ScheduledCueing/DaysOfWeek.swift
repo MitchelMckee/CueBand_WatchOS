@@ -29,7 +29,8 @@ struct DaysOfWeek: View {
                 
                 Button(action: {
                     trigger_haptic()
-                    self.setting = (self.setting - 1 + schedule_settings.times_of_day.count) % schedule_settings.times_of_day.count
+                    self.setting = (self.setting - 1 + schedule_settings.days_of_week.count) % schedule_settings.days_of_week.count
+                    print(self.setting)
                 }) {
                     Image(systemName: "chevron.left")
                         .font(.title2)
